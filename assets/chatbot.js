@@ -7,8 +7,8 @@
       re: /live|whatsapp|call|speak|talk.*person|human|agent|real person|connect/i,
       ans: `Sure! Connect with us live right now:<br><br>
 💬 <b>WhatsApp</b> — fastest way to reach us<br>
-<a href="https://wa.me/14695551088?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path%20services." target="_blank" style="display:inline-block;margin-top:8px;padding:9px 18px;background:#25d366;color:#fff;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;">📱 Open WhatsApp Chat</a><br><br>
-📞 <b>Call:</b> (469) 555-1088<br>
+<a href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path%20services." target="_blank" style="display:inline-block;margin-top:8px;padding:9px 18px;background:#25d366;color:#fff;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;">📱 Open WhatsApp Chat</a><br><br>
+📞 <b>Call:</b> (214)945-5080<br>
 ✉️ <b>Email:</b> seva@dharmpath.com<br><br>
 We're available <b>Mon–Sun, 8am–9pm CST</b>. 🙏`
     },
@@ -29,7 +29,7 @@ We're available <b>Mon–Sun, 8am–9pm CST</b>. 🙏`
 2️⃣ Select your service, date & time<br>
 3️⃣ Choose in-person (DFW) or online (Zoom)<br>
 4️⃣ Submit your details — we confirm within a few hours<br><br>
-Or WhatsApp us directly: 📞 <b>(469) 555-1088</b>`
+Or WhatsApp us directly: 📞 <b>(214)945-5080</b>`
     },
     {
       re: /price|cost|fee|charge|rate|how much|dollar|\$/i,
@@ -40,7 +40,7 @@ Or WhatsApp us directly: 📞 <b>(469) 555-1088</b>`
 🔮 Jyotish Consultation — <b>$81/session</b><br>
 🎶 Bhajan Sandhya / Mata Ki Chowki — <b>Custom Quote</b><br>
 📚 Spiritual Education Sessions — <b>Free / Dana</b><br><br>
-For custom quotes on larger events, call us at 📞 (469) 555-1088`
+For custom quotes on larger events, call us at 📞 (214)945-5080`
     },
     {
       re: /city|cities|area|location|dallas|plano|frisco|mckinney|allen|irving|dfw/i,
@@ -78,12 +78,12 @@ Select <b>"Online (Zoom)"</b> when booking, or WhatsApp us to discuss.`
 💑 Kundli Milan (marriage matching)<br>
 ⚡ Graha dosh remedies<br><br>
 <b>$81/session</b> — online or in-person DFW<br>
-📞 <b>(469) 555-1088</b> to book.`
+📞 <b>(214)945-5080</b> to book.`
     },
     {
       re: /contact|phone|email|reach/i,
       ans: `Reach us anytime:<br><br>
-📞 <b>(469) 555-1088</b><br>
+📞 <b>(214)945-5080</b><br>
 💬 <b>WhatsApp</b> — same number<br>
 ✉️ <b>seva@dharmpath.com</b><br><br>
 WhatsApp is the fastest way to reach us.<br>
@@ -149,8 +149,8 @@ Our experienced priests and educators serve across Dallas, Plano, Frisco, McKinn
 .dp-inv-btn{flex:1;padding:8px 0;border-radius:8px;border:none;cursor:pointer;font-size:12.5px;font-weight:700;font-family:inherit;transition:background .15s;}
 .dp-inv-btn.primary{background:#6b1f1f;color:#fff;}
 .dp-inv-btn.primary:hover{background:#521818;}
-.dp-inv-btn.secondary{background:#fff3e0;color:#6b1f1f;border:1px solid #e8d9c4;}
-.dp-inv-btn.secondary:hover{background:#ffe0b2;}
+.dp-inv-btn.secondary{background:#25d366;color:#fff;border:1px solid #1da857;}
+.dp-inv-btn.secondary:hover{background:#1da857;}
 .dp-inv-footer{background:#f9f5f0;border-top:1px solid #e8d9c4;padding:8px 18px;font-size:11px;color:#9a7040;display:flex;align-items:center;gap:6px;}
 .dp-inv-dot{width:7px;height:7px;border-radius:50%;background:#25d366;flex-shrink:0;}
 
@@ -233,7 +233,7 @@ Our experienced priests and educators serve across Dallas, Plano, Frisco, McKinn
           <p class="dp-inv-msg">🙏 Have questions about our services, bookings, or spiritual sessions? We're here to help!</p>
           <div class="dp-inv-btns">
             <button class="dp-inv-btn primary" id="dp-invite-open">Start Chat</button>
-            <a class="dp-inv-btn secondary" href="https://wa.me/14695551088?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank" style="text-align:center;text-decoration:none;">💬 WhatsApp</a>
+            <a class="dp-inv-btn secondary" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank" style="text-align:center;text-decoration:none;">💬 WhatsApp</a>
           </div>
         </div>
         <div class="dp-inv-footer">
@@ -251,13 +251,13 @@ Our experienced priests and educators serve across Dallas, Plano, Frisco, McKinn
             <small><span class="dp-onl"></span> Online — here to help</small>
           </div>
           <div class="dp-hbtns">
-            <a class="dp-hbtn" href="https://wa.me/14695551088?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank" title="Chat on WhatsApp" style="text-decoration:none;">📱</a>
+            <a class="dp-hbtn" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank" title="Chat on WhatsApp" style="text-decoration:none;">📱</a>
             <button class="dp-hbtn" id="dp-x" aria-label="Close">✕</button>
           </div>
         </div>
         <div id="dp-sub">
           <div class="dp-sub-txt">Need to talk to someone right now?</div>
-          <a class="dp-live-btn" href="https://wa.me/14695551088?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank">
+          <a class="dp-live-btn" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank">
             📱 Live on WhatsApp
           </a>
         </div>
@@ -369,8 +369,8 @@ Our experienced priests and educators serve across Dallas, Plano, Frisco, McKinn
       // Fallback
       botMsg(
         `Thank you for your message! Our team will get back to you shortly.<br><br>For an immediate response:<br><br>` +
-        `<a href="https://wa.me/14695551088?text=Jai%20Shri%20Ram!%20${encodeURIComponent(text)}" target="_blank" style="display:inline-block;padding:8px 16px;background:#25d366;color:#fff;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;margin-top:4px;">📱 Send on WhatsApp</a><br><br>` +
-        `📞 <b>(469) 555-1088</b><br>✉️ seva@dharmpath.com`,
+        `<a href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20${encodeURIComponent(text)}" target="_blank" style="display:inline-block;padding:8px 16px;background:#25d366;color:#fff;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;margin-top:4px;">📱 Send on WhatsApp</a><br><br>` +
+        `📞 <b>(214)945-5080</b><br>✉️ seva@dharmpath.com`,
         BACK_QUICK
       );
     }, 800);
