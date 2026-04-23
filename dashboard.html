@@ -21,14 +21,14 @@
     <a class="logo" href="index.html"><img src="logo.png" alt="Dharm Path — DFW Spiritual Services" class="nav-logo"/></a>
     <div class="nav-tagline">Indian Priest &amp; Spiritual Services</div>
     <nav class="menu">
-      <a href="services.html">Services</a>
-      <a href="education.html">Discourse</a>
-
-      <a href="booking.html">Book Now</a>
       <a href="about.html">About</a>
+      <a href="pooja-seva.html">Pooja Seva</a>
+      <a href="spiritual-seva.html">Spiritual Seva</a>
+      <a href="education.html">Discourses</a>
+      <a href="jyotish.html">Jyotish</a>
+      <a href="booking.html">Book Now</a>
       <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a class="btn btn-primary" href="booking.html">Start Booking</a>
+      <a class="btn btn-login" href="login.html">Login</a>
     </nav>
     <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -37,8 +37,8 @@
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a> / Dashboard</div>
-    <h1>Devotee Dashboard</h1>
-    <p class="section-intro" style="margin-bottom:0;">Welcome back — manage your bookings, profile, and payment history.</p>
+    <h1 id="dash-heading">Devotee Dashboard</h1>
+    <p class="section-intro" style="margin-bottom:0;">Welcome back — manage your bookings and devotee profile.</p>
   </div>
 </section>
 
@@ -46,62 +46,41 @@
   <div class="container">
     <div class="stats-row">
       <div class="stat">
-        <div class="kpi">Upcoming Bookings</div>
-        <h3>2</h3>
+        <div class="kpi">Total Requests</div>
+        <h3 id="stat-total">0</h3>
       </div>
       <div class="stat">
-        <div class="kpi">Past Services</div>
-        <h3>5</h3>
-      </div>
-      <div class="stat">
-        <div class="kpi">Family Profiles</div>
-        <h3>1</h3>
-      </div>
-      <div class="stat">
-        <div class="kpi">Outstanding Balance</div>
-        <h3>$150</h3>
+        <div class="kpi">Confirmed</div>
+        <h3 id="stat-confirmed">0</h3>
       </div>
     </div>
 
     <div class="grid-2" style="margin-top:28px;">
       <div class="dashboard-card">
-        <h3>Upcoming Bookings</h3>
-        <table class="table">
-          <tr><th>Date</th><th>Service</th><th>Status</th></tr>
-          <tr><td>May 4</td><td>Sunder Kand Path</td><td><span class="pill" style="background:#eef8f1;color:var(--success);">Confirmed</span></td></tr>
-          <tr><td>May 18</td><td>Jyotish Consultation</td><td><span class="pill" style="background:#fff3e0;">Payment Pending</span></td></tr>
-        </table>
-        <p style="margin-top:16px;"><a class="btn btn-primary" href="booking.html">Book Another Service</a></p>
+        <h3>My Booking Requests</h3>
+        <div id="my-bookings"><p style="color:var(--muted);font-size:14px;margin:16px 0;">No booking requests yet.</p></div>
+        <p style="margin-top:16px;"><a class="btn btn-primary" href="booking.html">Request a Service</a></p>
       </div>
 
       <div class="dashboard-card">
         <h3>Profile Snapshot</h3>
-        <p><strong>Name:</strong> Sample Devotee</p>
-        <p><strong>Phone:</strong> (469) 555-0000</p>
-        <p><strong>City:</strong> Plano, TX</p>
-        <p><strong>Preferred Language:</strong> Hindi / English</p>
-        <p><strong>Gotra:</strong> —</p>
+        <p><strong>Name:</strong> <span id="profile-name">—</span></p>
+        <p><strong>Phone:</strong> <span id="profile-phone">—</span></p>
+        <p><strong>Email:</strong> <span id="profile-email">—</span></p>
         <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
           <a class="btn btn-outline" href="#">Edit Profile</a>
-          <a class="btn btn-secondary" href="login.html">Sign Out</a>
+          <a class="btn btn-secondary" href="#" id="signout-btn">Sign Out</a>
         </p>
       </div>
 
       <div class="dashboard-card">
-        <h3>Payment History</h3>
-        <table class="table">
-          <tr><th>Date</th><th>Service</th><th>Amount</th></tr>
-          <tr><td>Apr 12</td><td>Griha Pravesh</td><td>$351</td></tr>
-          <tr><td>Mar 5</td><td>Sunder Kand Path</td><td>$251</td></tr>
-          <tr><td>Feb 14</td><td>Jyotish Consult.</td><td>$81</td></tr>
-        </table>
+        <h3>Past Services</h3>
+        <div id="past-bookings"><p style="color:var(--muted);font-size:14px;margin:16px 0;">No past services yet.</p></div>
       </div>
 
       <div class="dashboard-card">
         <h3>Quick Actions</h3>
-        <p style="color:var(--muted);font-size:14px;margin-bottom:16px;">Common things you can do from your dashboard.</p>
-        <p><span class="pill">📅 Reschedule Booking</span></p>
-        <p><span class="pill">💳 Make a Payment</span></p>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:16px;">Things you can do from your dashboard.</p>
         <p><span class="pill">📋 View Samagri List</span></p>
         <p><span class="pill">📞 Contact Support</span></p>
         <p style="margin-top:18px;"><a class="btn btn-primary" href="booking.html">Book a New Service</a></p>
@@ -120,7 +99,8 @@
       <div>
         <h4>Pages</h4>
         <p><a href="index.html">Home</a></p>
-        <p><a href="services.html">Services</a></p>
+        <p><a href="pooja-seva.html">Pooja Seva</a>
+      <a href="spiritual-seva.html">Spiritual Seva</a></p>
         <p><a href="education.html">Discourse</a></p>
         <p></p>
         <p><a href="booking.html">Book Now</a></p>
@@ -144,7 +124,63 @@
   </div>
 </footer>
 
+<script src="assets/auth.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/chatbot.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  DP.requireAuth();
+  var user = DP.currentUser();
+  if (!user) return;
+
+  document.getElementById('dash-heading').textContent  = 'Welcome, ' + user.name;
+  document.getElementById('profile-name').textContent  = user.name;
+  document.getElementById('profile-phone').textContent = user.phone || '—';
+  document.getElementById('profile-email').textContent = user.email;
+
+  document.getElementById('signout-btn').addEventListener('click', function (e) {
+    e.preventDefault(); DP.logout();
+  });
+
+  /* Load this devotee's booking requests */
+  var all = JSON.parse(localStorage.getItem('dp_booking_requests') || '[]');
+  var mine = all.filter(function(r) { return r.email === user.email; });
+
+  var upcoming = mine.filter(function(r) { return r.status !== 'Rejected'; });
+  var past     = mine.filter(function(r) { return r.status === 'Rejected'; });
+
+  /* Update stats */
+  document.getElementById('stat-total').textContent     = mine.length;
+  document.getElementById('stat-confirmed').textContent = mine.filter(function(r){ return r.status==='Confirmed'; }).length;
+
+  function statusStyle(s) {
+    if (s === 'Confirmed') return 'background:#eef8f1;color:var(--success)';
+    if (s === 'Rejected')  return 'background:#fdecea;color:#c0392b';
+    return 'background:#fff3e0;color:#b36a00';
+  }
+
+  if (upcoming.length) {
+    document.getElementById('my-bookings').innerHTML = upcoming.slice().reverse().map(function(r) {
+      return '<div style="border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:10px;">' +
+        '<p style="font-weight:700;color:var(--maroon);margin:0 0 4px;">' + r.service + '</p>' +
+        '<p style="font-size:13px;color:var(--muted);margin:0;">📅 ' + (r.date||'—') + ' &nbsp;·&nbsp; 📍 ' + (r.city||'—') + '</p>' +
+        (r.adminNote ? '<p style="font-size:13px;color:var(--muted);margin:4px 0 0;">Note: ' + r.adminNote + '</p>' : '') +
+        '<p style="margin:8px 0 0;"><span class="pill" style="' + statusStyle(r.status) + '">' + r.status + '</span></p>' +
+        '</div>';
+    }).join('');
+  }
+
+  if (past.length) {
+    document.getElementById('past-bookings').innerHTML = past.slice().reverse().map(function(r) {
+      return '<div style="border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:10px;">' +
+        '<p style="font-weight:700;color:var(--maroon);margin:0 0 4px;">' + r.service + '</p>' +
+        '<p style="font-size:13px;color:var(--muted);margin:0;">📅 ' + (r.date||'—') + ' &nbsp;·&nbsp; 📍 ' + (r.city||'—') + '</p>' +
+        (r.adminNote ? '<p style="font-size:13px;color:var(--muted);margin:4px 0 0;">Note: ' + r.adminNote + '</p>' : '') +
+        '<p style="margin:8px 0 0;"><span class="pill" style="' + statusStyle(r.status) + '">' + r.status + '</span></p>' +
+        '</div>';
+    }).join('');
+  }
+});
+</script>
 </body>
 </html>

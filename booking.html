@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Book Now | Dharm Path — DFW Spiritual Services</title>
-  <meta name="description" content="Book a priest service, devotional path, or Jyotish consultation across DFW. Easy online booking with advance or full payment."/>
+  <meta name="description" content="Request a Pooja Seva or Spiritual Seva across DFW. Submit your booking request — admin will confirm availability and coordinate your seva."/>
   <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
@@ -21,14 +21,14 @@
     <a class="logo" href="index.html"><img src="logo.png" alt="Dharm Path — DFW Spiritual Services" class="nav-logo"/></a>
     <div class="nav-tagline">Indian Priest &amp; Spiritual Services</div>
     <nav class="menu">
-      <a href="services.html">Services</a>
-      <a href="education.html">Discourse</a>
-
-      <a href="booking.html">Book Now</a>
       <a href="about.html">About</a>
+      <a href="pooja-seva.html">Pooja Seva</a>
+      <a href="spiritual-seva.html">Spiritual Seva</a>
+      <a href="education.html">Discourses</a>
+      <a href="jyotish.html">Jyotish</a>
+      <a href="booking.html">Book Now</a>
       <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a class="btn btn-primary" href="booking.html">Start Booking</a>
+      <a class="btn btn-login" href="login.html">Login</a>
     </nav>
     <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -37,53 +37,85 @@
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a> / Book Now</div>
-    <h1>Book a Service</h1>
-    <p class="section-intro" style="margin-bottom:0;">Fill in your details below and we'll confirm your booking within a few hours.</p>
+    <h1>Request a Service</h1>
+    <p class="section-intro" style="margin-bottom:0;">Submit your booking request — we will review availability and confirm or suggest an alternative date.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container split">
     <div class="card">
-      <h2 style="margin-top:0;">Booking Form</h2>
-      <form class="quick-form">
-        <select style="grid-column:span 2;"><option>Select Service</option><option>Sunder Kand Path — from $251</option><option>Griha Pravesh Pooja — from $351</option><option>Bhajan Sandhya — Custom Quote</option><option>Mata Ki Chowki — Custom Quote</option><option>Ramcharitmanas Path — from $301</option><option>Jyotish Consultation — $81/session</option><option disabled>─── Spiritual Education ───</option><option>Shree Ram Charit Manas Session</option><option>Bhagwad Gita Session</option><option>Ashtavakra Gita Session</option><option>Upanishads Session</option><option>Naam Jap Session</option><option>Bhajans &amp; Sankirtan Session</option><option>1-on-1 Spiritual Mentoring</option></select>
-        <select><option>Mode</option><option>In-Person (DFW)</option><option>Online (Zoom)</option></select>
-        <select><option>Time Slot</option><option>Morning (7–10am)</option><option>Afternoon (11am–2pm)</option><option>Evening (5–8pm)</option></select>
-        <input type="date"/>
-        <select><option>City</option><option>Dallas</option><option>Plano</option><option>Frisco</option><option>McKinney</option><option>Allen</option><option>Irving</option><option>Celina</option><option>Melissa</option><option>Anna</option></select>
-        <input placeholder="Full Name"/>
-        <input placeholder="Phone Number"/>
-        <input placeholder="Email Address" type="email"/>
-        <input placeholder="Service Address (or 'Online')" style="grid-column:span 2;"/>
-        <input placeholder="Gotra (optional)"/>
-        <select><option>Payment Preference</option><option>Pay Advance</option><option>Pay Full Amount</option><option>Request Custom Quote</option></select>
-        <input placeholder="Coupon Code (optional)"/>
-        <input placeholder="Number of Attendees (approx.)"/>
-        <textarea placeholder="Special instructions, event notes, samagri help needed, or anything else…" style="grid-column:span 2;"></textarea>
+      <h2 style="margin-top:0;">Booking Request Form</h2>
+      <form class="quick-form" id="booking-form" novalidate>
+
+        <select style="grid-column:span 2;" id="bk-service" required>
+          <option value="">Select Service</option>
+          <optgroup label="── Pooja Seva ──">
+            <option>Satyanarayan Katha</option>
+            <option>Griha Pravesh</option>
+            <option>Vivah Sanskar</option>
+            <option>Vahana Pooja</option>
+            <option>Ganesh Pooja</option>
+            <option>Rudrabhishek</option>
+            <option>Navgraha Pooja &amp; Shanti</option>
+            <option>Vaastu Pooja</option>
+            <option>Namkaran Sanskar</option>
+            <option>Mundan Sanskar</option>
+          </optgroup>
+          <optgroup label="── Spiritual Seva ──">
+            <option>Sunder Kand Path</option>
+            <option>Ramcharitmanas Path</option>
+            <option>Durga Saptashati</option>
+            <option>Hanuman Chalisa Path</option>
+            <option>Akhand Path</option>
+            <option>Bhajan Sandhya</option>
+            <option>Mata Ki Chowki</option>
+          </optgroup>
+        </select>
+
+        <select id="bk-slot"><option>Preferred Time Slot</option><option>Morning (7–10am)</option><option>Afternoon (11am–2pm)</option><option>Evening (5–8pm)</option></select>
+        <input type="date" id="bk-date"/>
+        <select id="bk-city"><option>City</option><option>Dallas</option><option>Plano</option><option>Frisco</option><option>McKinney</option><option>Allen</option><option>Irving</option><option>Celina</option><option>Melissa</option><option>Anna</option></select>
+        <input id="bk-name" placeholder="Full Name" required/>
+        <input id="bk-phone" placeholder="Phone Number" required/>
+        <input id="bk-email" placeholder="Email Address" type="email" required/>
+        <input id="bk-address" placeholder="Service Address" style="grid-column:span 2;"/>
+        <input id="bk-gotra" placeholder="Gotra (optional)"/>
+        <input id="bk-attendees" placeholder="Number of Attendees (approx.)"/>
+        <textarea id="bk-notes" placeholder="Special instructions, event notes, or anything else we should know…" style="grid-column:span 2;"></textarea>
       </form>
-      <p style="margin-top:18px"><a class="btn btn-primary" style="display:block;text-align:center;padding:14px;" href="#">Submit Booking Request</a></p>
+      <p id="bk-error" style="color:#c0392b;font-size:13px;margin:8px 0 0;display:none;"></p>
+      <p id="bk-success" style="color:#1f7a4f;font-size:14px;font-weight:600;margin:12px 0 0;display:none;">🙏 Your request has been submitted. We will contact you within a few hours to confirm.</p>
+      <p style="margin-top:18px"><button class="btn btn-primary" style="display:block;width:100%;text-align:center;padding:14px;" type="submit" form="booking-form">Send Booking Request →</button></p>
     </div>
 
     <div>
       <div class="card" style="margin-bottom:20px;">
-        <h3 style="margin-top:0;color:var(--maroon);">Booking Summary</h3>
-        <table class="table">
-          <tr><th>Selected Service</th><td>Sunder Kand Path</td></tr>
-          <tr><th>Mode</th><td>In-Person</td></tr>
-          <tr><th>City</th><td>Plano, TX</td></tr>
-          <tr><th>Pricing</th><td>Starting at $251</td></tr>
-          <tr><th>Advance Required</th><td>$101</td></tr>
-        </table>
-      </div>
-      <div class="notice" style="margin-bottom:20px;">
-        Final site can connect to <strong>Stripe or Square</strong> for secure online payments — advance, full, or quote-based.
+        <h3 style="margin-top:0;color:var(--maroon);">How it works</h3>
+        <div class="timeline" style="margin-top:4px;">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div><strong>Submit your request</strong><br/>Fill in the service, preferred date and your contact details.</div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div><strong>We review availability</strong><br/>The admin checks the schedule and responds within a few hours.</div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div><strong>Confirmation or alternative</strong><br/>You will receive a confirmation or a suggested alternative date via phone or WhatsApp.</div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div><strong>Samagri guidance</strong><br/>Once confirmed, we share a samagri preparation list for your service.</div>
+          </div>
+        </div>
       </div>
       <div class="card">
-        <h3 style="margin-top:0;color:var(--maroon);">Need help booking?</h3>
-        <p style="color:var(--muted);font-size:14px;">Call or WhatsApp us directly — we'll help you pick the right service and time.</p>
+        <h3 style="margin-top:0;color:var(--maroon);">Need help?</h3>
+        <p style="color:var(--muted);font-size:14px;">Call or WhatsApp us — we will help you choose the right service and date.</p>
         <p style="margin-top:12px;"><strong>📞 (214)945-5080</strong></p>
-        <p><a class="btn btn-secondary" style="margin-top:8px;" href="dashboard.html">View Devotee Dashboard</a></p>
+        <p><a class="btn btn-secondary" style="margin-top:8px;" href="dashboard.html">View My Dashboard</a></p>
       </div>
     </div>
   </div>
@@ -99,7 +131,8 @@
       <div>
         <h4>Pages</h4>
         <p><a href="index.html">Home</a></p>
-        <p><a href="services.html">Services</a></p>
+        <p><a href="pooja-seva.html">Pooja Seva</a>
+      <a href="spiritual-seva.html">Spiritual Seva</a></p>
         <p><a href="education.html">Discourse</a></p>
         <p></p>
         <p><a href="booking.html">Book Now</a></p>
@@ -123,7 +156,85 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="assets/auth.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/chatbot.js"></script>
+<script>
+  /* ── EmailJS config ── fill these in after EmailJS setup ── */
+  var EJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+  var EJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+  var EJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+  if (EJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+    emailjs.init({ publicKey: EJS_PUBLIC_KEY });
+  }
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('booking-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var errEl     = document.getElementById('bk-error');
+    var successEl = document.getElementById('bk-success');
+    errEl.style.display = 'none';
+    successEl.style.display = 'none';
+
+    var service = document.getElementById('bk-service').value;
+    var name    = document.getElementById('bk-name').value.trim();
+    var phone   = document.getElementById('bk-phone').value.trim();
+    var email   = document.getElementById('bk-email').value.trim();
+
+    if (!service) { errEl.textContent = 'Please select a service.'; errEl.style.display = 'block'; return; }
+    if (!name)    { errEl.textContent = 'Please enter your name.'; errEl.style.display = 'block'; return; }
+    if (!phone)   { errEl.textContent = 'Please enter your phone number.'; errEl.style.display = 'block'; return; }
+    if (!email)   { errEl.textContent = 'Please enter your email address.'; errEl.style.display = 'block'; return; }
+
+    var submitted = new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
+    var request = {
+      id:        Date.now(),
+      service:   service,
+      slot:      document.getElementById('bk-slot').value,
+      date:      document.getElementById('bk-date').value,
+      city:      document.getElementById('bk-city').value,
+      name:      name,
+      phone:     phone,
+      email:     email.toLowerCase(),
+      address:   document.getElementById('bk-address').value,
+      gotra:     document.getElementById('bk-gotra').value,
+      attendees: document.getElementById('bk-attendees').value,
+      notes:     document.getElementById('bk-notes').value,
+      status:    'Pending',
+      adminNote: '',
+      submitted: submitted
+    };
+
+    var requests = JSON.parse(localStorage.getItem('dp_booking_requests') || '[]');
+    requests.push(request);
+    localStorage.setItem('dp_booking_requests', JSON.stringify(requests));
+
+    /* Send email notification to admin via EmailJS */
+    if (EJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+      emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, {
+        to_email:  'shukla.garima78@gmail.com',
+        service:   request.service,
+        name:      request.name,
+        phone:     request.phone,
+        email:     request.email,
+        date:      request.date || '—',
+        slot:      request.slot,
+        city:      request.city,
+        address:   request.address || '—',
+        gotra:     request.gotra || '—',
+        attendees: request.attendees || '—',
+        notes:     request.notes || '—',
+        submitted: submitted
+      });
+    }
+
+    document.getElementById('booking-form').reset();
+    successEl.style.display = 'block';
+    successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+});
+</script>
 </body>
 </html>

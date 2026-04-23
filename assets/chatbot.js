@@ -19,8 +19,9 @@ We're available <b>Mon–Sun, 8am–9pm CST</b>. 🙏`
 📖 <b>Path & Katha</b> — Sunder Kand, Ramcharitmanas, Durga Saptashati, Akhand Path<br>
 🎶 <b>Bhakti Events</b> — Bhajan Sandhya, Mata Ki Chowki, Jagran, Sankirtan<br>
 🔮 <b>Jyotish</b> — Kundli reading, Muhurat, Kundli matching<br>
-📚 <b>Spiritual Education</b> — Online Zoom sessions & in-person DFW gatherings<br><br>
-👉 <a href="services.html" style="color:#d96a00;text-decoration:underline">View all services →</a>`
+📚 <b>Spiritual Sessions</b> — Online Zoom sessions & in-person DFW gatherings<br><br>
+👉 <a href="pooja-seva.html" style="color:#d96a00;text-decoration:underline">Pooja Seva →</a><br>
+👉 <a href="spiritual-seva.html" style="color:#d96a00;text-decoration:underline">Spiritual Seva →</a>`
     },
     {
       re: /book|appoint|schedul|reserv|slot/i,
@@ -33,34 +34,29 @@ Or WhatsApp us directly: 📞 <b>(214)945-5080</b>`
     },
     {
       re: /price|cost|fee|charge|rate|how much|dollar|\$/i,
-      ans: `Here's a quick price overview:<br><br>
-📿 Sunder Kand Path — <b>from $251</b><br>
-📖 Ramcharitmanas Path — <b>from $301</b><br>
-🏠 Griha Pravesh Pooja — <b>from $351</b><br>
-🔮 Jyotish Consultation — <b>$81/session</b><br>
-🎶 Bhajan Sandhya / Mata Ki Chowki — <b>Custom Quote</b><br>
-📚 Spiritual Education Sessions — <b>Free / Dana</b><br><br>
-For custom quotes on larger events, call us at 📞 (214)945-5080`
+      ans: `We serve with full devotion. Please reach out to us directly to discuss your seva and we will be happy to guide you.<br><br>
+📞 <b>(214)945-5080</b><br>
+💬 WhatsApp — same number`
     },
     {
       re: /city|cities|area|location|dallas|plano|frisco|mckinney|allen|irving|dfw/i,
       ans: `We serve the entire <b>DFW metroplex</b>:<br><br>
 📍 Dallas · Plano · Frisco<br>
-📍 McKinney · Allen · Irving<br><br>
-Tell us your location when booking — we come to you!<br>
-👉 <a href="cities.html" style="color:#d96a00;text-decoration:underline">See full city coverage →</a>`
+📍 McKinney · Allen · Irving<br>
+📍 Celina · Melissa · Anna<br><br>
+Tell us your location when booking — we come to you!`
     },
     {
       re: /online|zoom|virtual|remote/i,
       ans: `Yes! Many services are available <b>online via Zoom</b>:<br><br>
 💻 Jyotish consultations<br>
-💻 Spiritual Education sessions (weekly)<br>
+💻 Spiritual Sessions (weekly)<br>
 💻 Some path & katha sessions<br><br>
 Select <b>"Online (Zoom)"</b> when booking, or WhatsApp us to discuss.`
     },
     {
       re: /education|session|gita|ramayan|manas|upanishad|naam.?jap|learn|class/i,
-      ans: `Our <b>Spiritual Education Sessions</b>:<br><br>
+      ans: `Our <b>Spiritual Sessions</b>:<br><br>
 📜 Shree Ram Charit Manas<br>
 🌸 Bhagwad Gita<br>
 ✨ Ashtavakra Gita<br>
@@ -77,8 +73,8 @@ Select <b>"Online (Zoom)"</b> when booking, or WhatsApp us to discuss.`
 📅 Muhurat selection<br>
 💑 Kundli Milan (marriage matching)<br>
 ⚡ Graha dosh remedies<br><br>
-<b>$81/session</b> — online or in-person DFW<br>
-📞 <b>(214)945-5080</b> to book.`
+Available online (Zoom) or in-person across DFW.<br>
+📞 <b>(214)945-5080</b> to schedule a session.`
     },
     {
       re: /contact|phone|email|reach/i,
@@ -91,11 +87,8 @@ WhatsApp is the fastest way to reach us.<br>
     },
     {
       re: /payment|pay|advance|deposit|refund|cancel/i,
-      ans: `We offer flexible payment options:<br><br>
-💳 Pay in Full — at time of booking<br>
-💳 Pay Advance — deposit to confirm, balance on the day<br>
-📋 Custom Quote — for larger events<br><br>
-We accept Zelle, cash, and online payments (Stripe coming soon).<br>For cancellations, please notify us <b>48 hours in advance</b>.`
+      ans: `For cancellations or rescheduling, please notify us <b>48 hours in advance</b> so we can accommodate other families.<br><br>
+📞 <b>(214)945-5080</b> — call or WhatsApp anytime.`
     },
     {
       re: /samagri|material|item|need|bring|prepare/i,
@@ -107,7 +100,7 @@ Mention any questions in the booking form or ask us on WhatsApp.`
     {
       re: /about|who|team|priest|pandit|founder/i,
       ans: `<b>Dharm Path</b> was founded to bring authentic Indian devotional services to the DFW community — with ease, dignity, and reverence.<br><br>
-Our experienced priests and educators serve across Dallas, Plano, Frisco, McKinney, Allen and Irving.<br><br>
+We serve families across Dallas, Plano, Frisco, McKinney, Allen and Irving.<br><br>
 👉 <a href="about.html" style="color:#d96a00;text-decoration:underline">Read our full story →</a>`
     },
     {
@@ -319,9 +312,9 @@ Our experienced priests and educators serve across Dallas, Plano, Frisco, McKinn
   const MAIN_QUICK = [
     { label: '📋 Services',          val: 'What services do you offer?' },
     { label: '📅 Book a Service',    val: 'How do I book a service?' },
-    { label: '💰 Pricing',           val: 'What are your prices?' },
-    { label: '📍 Cities Covered',    val: 'Which cities do you serve?' },
-    { label: '📚 Education Sessions',val: 'Tell me about education sessions' },
+    { label: '🔮 Jyotish',             val: 'Tell me about Jyotish' },
+    { label: '📍 DFW Areas',          val: 'Which cities do you serve?' },
+    { label: '📚 Spiritual Sessions',val: 'Tell me about spiritual sessions' },
     { label: '📱 Live Chat',         val: 'I want to chat live' },
   ];
 

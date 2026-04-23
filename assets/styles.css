@@ -170,6 +170,16 @@ li { margin-bottom: 6px; }
   box-shadow: 0 6px 22px rgba(217,106,0,.40);
   transform: translateY(-2px);
 }
+.btn-login {
+  background: #e8882a;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(232,136,42,.22);
+}
+.btn-login:hover {
+  background: #d97820;
+  box-shadow: 0 6px 22px rgba(232,136,42,.34);
+  transform: translateY(-2px);
+}
 .btn-secondary {
   background: #fff;
   color: var(--maroon);

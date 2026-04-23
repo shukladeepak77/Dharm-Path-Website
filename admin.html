@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Admin Dashboard | Dharm Path</title>
-  <meta name="description" content="Dharm Path admin dashboard — manage bookings, priests, payments, and customers."/>
+  <meta name="description" content="Dharm Path admin dashboard — manage bookings, priests, and customers."/>
   <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
@@ -21,14 +21,14 @@
     <a class="logo" href="index.html"><img src="logo.png" alt="Dharm Path — DFW Spiritual Services" class="nav-logo"/></a>
     <div class="nav-tagline">Indian Priest &amp; Spiritual Services</div>
     <nav class="menu">
-      <a href="services.html">Services</a>
-      <a href="education.html">Discourse</a>
-
-      <a href="booking.html">Book Now</a>
       <a href="about.html">About</a>
+      <a href="pooja-seva.html">Pooja Seva</a>
+      <a href="spiritual-seva.html">Spiritual Seva</a>
+      <a href="education.html">Discourses</a>
+      <a href="jyotish.html">Jyotish</a>
+      <a href="booking.html">Book Now</a>
       <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a class="btn btn-primary" href="booking.html">Start Booking</a>
+      <a class="btn btn-login" href="login.html">Login</a>
     </nav>
     <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -38,79 +38,36 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a> / Admin</div>
     <h1>Admin Dashboard</h1>
-    <p class="section-intro" style="margin-bottom:0;">Operations overview — bookings, payments, priests, and customer management.</p>
+    <p class="section-intro" style="margin-bottom:0;">Operations overview — bookings, priests, and customer management.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="stats-row">
-      <div class="stat">
-        <div class="kpi">New Leads</div>
-        <h3>18</h3>
-      </div>
-      <div class="stat">
-        <div class="kpi">Pending Bookings</div>
-        <h3>7</h3>
-      </div>
-      <div class="stat">
-        <div class="kpi">Priests Available</div>
-        <h3>4</h3>
-      </div>
-      <div class="stat">
-        <div class="kpi">Revenue This Month</div>
-        <h3>$4.8K</h3>
+
+    <div class="stats-row" id="admin-stats">
+      <div class="stat"><div class="kpi">Total Requests</div><h3 id="stat-total">0</h3></div>
+      <div class="stat"><div class="kpi">Pending</div><h3 id="stat-pending">0</h3></div>
+      <div class="stat"><div class="kpi">Confirmed</div><h3 id="stat-confirmed">0</h3></div>
+      <div class="stat"><div class="kpi">Rejected</div><h3 id="stat-rejected">0</h3></div>
+    </div>
+
+    <!-- Filter tabs -->
+    <div style="display:flex;gap:10px;margin:24px 0 16px;flex-wrap:wrap;">
+      <button class="btn btn-primary" id="filter-all"       onclick="renderAdmin('All')">All</button>
+      <button class="btn btn-outline"  id="filter-pending"  onclick="renderAdmin('Pending')">Pending</button>
+      <button class="btn btn-outline"  id="filter-confirmed" onclick="renderAdmin('Confirmed')">Confirmed</button>
+      <button class="btn btn-outline"  id="filter-rejected"  onclick="renderAdmin('Rejected')">Rejected</button>
+    </div>
+
+    <!-- Booking requests table -->
+    <div class="dashboard-card" style="overflow-x:auto;">
+      <h3 style="margin-top:0;">Booking Requests</h3>
+      <div id="admin-requests">
+        <p style="color:var(--muted);font-size:14px;">No booking requests yet.</p>
       </div>
     </div>
 
-    <div class="grid-2" style="margin-top:28px;">
-      <div class="dashboard-card">
-        <h3>Today's Booking Queue</h3>
-        <table class="table">
-          <tr><th>Service</th><th>City</th><th>Status</th></tr>
-          <tr><td>Griha Pravesh</td><td>Frisco</td><td><span class="pill" style="background:#fff3e0;">Assign Priest</span></td></tr>
-          <tr><td>Sunder Kand Path</td><td>Plano</td><td><span class="pill" style="background:#eef8f1;color:var(--success);">Confirmed</span></td></tr>
-          <tr><td>Jyotish Call</td><td>Online</td><td><span class="pill" style="background:#e8f4ff;color:#1a5fa8;">Paid</span></td></tr>
-        </table>
-        <p style="margin-top:16px;"><a class="btn btn-primary" href="booking.html">View All Bookings</a></p>
-      </div>
-
-      <div class="dashboard-card">
-        <h3>Admin Actions</h3>
-        <p style="color:var(--muted);font-size:14px;margin-bottom:16px;">Quick access to key management functions.</p>
-        <p>
-          <span class="pill">📋 Manage Services</span>
-          <span class="pill">💰 Update Pricing</span>
-          <span class="pill">📣 Send Reminders</span>
-          <span class="pill">💳 Track Payments</span>
-          <span class="pill">👤 Priest Roster</span>
-          <span class="pill">🎟️ Coupon Codes</span>
-        </p>
-        <p style="margin-top:18px;"><a class="btn btn-primary" href="services.html">Edit Service Catalog</a></p>
-      </div>
-
-      <div class="dashboard-card">
-        <h3>Recent Inquiries</h3>
-        <table class="table">
-          <tr><th>Name</th><th>Service</th><th>City</th></tr>
-          <tr><td>Sharma Family</td><td>Griha Pravesh</td><td>McKinney</td></tr>
-          <tr><td>Gupta Ji</td><td>Jyotish</td><td>Online</td></tr>
-          <tr><td>Verma Family</td><td>Mata Ki Chowki</td><td>Allen</td></tr>
-        </table>
-      </div>
-
-      <div class="dashboard-card">
-        <h3>System Notes</h3>
-        <p style="color:var(--muted);font-size:14px;line-height:1.7;">In the live system this dashboard would include:</p>
-        <ul style="color:var(--muted);font-size:14px;">
-          <li>Full booking pipeline with priest assignment</li>
-          <li>Revenue reporting and monthly analytics</li>
-          <li>Customer review moderation</li>
-          <li>Automated WhatsApp / SMS reminders</li>
-          <li>Coupon and discount management</li>
-        </ul>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -124,7 +81,8 @@
       <div>
         <h4>Pages</h4>
         <p><a href="index.html">Home</a></p>
-        <p><a href="services.html">Services</a></p>
+        <p><a href="pooja-seva.html">Pooja Seva</a>
+      <a href="spiritual-seva.html">Spiritual Seva</a></p>
         <p><a href="education.html">Discourse</a></p>
         <p></p>
         <p><a href="booking.html">Book Now</a></p>
@@ -148,7 +106,113 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="assets/auth.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/chatbot.js"></script>
+<script>
+  /* ── EmailJS config — same keys as booking.html ── */
+  var EJS_PUBLIC_KEY          = 'YOUR_PUBLIC_KEY';
+  var EJS_SERVICE_ID          = 'YOUR_SERVICE_ID';
+  var EJS_DEVOTEE_TEMPLATE_ID = 'YOUR_DEVOTEE_TEMPLATE_ID';
+
+  if (EJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+    emailjs.init({ publicKey: EJS_PUBLIC_KEY });
+  }
+
+var currentFilter = 'All';
+
+function getRequests() {
+  return JSON.parse(localStorage.getItem('dp_booking_requests') || '[]');
+}
+function saveRequests(r) {
+  localStorage.setItem('dp_booking_requests', JSON.stringify(r));
+}
+
+function updateStats() {
+  var all = getRequests();
+  document.getElementById('stat-total').textContent     = all.length;
+  document.getElementById('stat-pending').textContent   = all.filter(function(r){ return r.status==='Pending'; }).length;
+  document.getElementById('stat-confirmed').textContent = all.filter(function(r){ return r.status==='Confirmed'; }).length;
+  document.getElementById('stat-rejected').textContent  = all.filter(function(r){ return r.status==='Rejected'; }).length;
+}
+
+function updateStatus(id, status) {
+  var noteEl = document.getElementById('note-' + id);
+  var note   = noteEl ? noteEl.value.trim() : '';
+  var requests = getRequests();
+  var updated;
+  requests = requests.map(function(r) {
+    if (r.id === id) { r.status = status; r.adminNote = note; updated = r; }
+    return r;
+  });
+  saveRequests(requests);
+
+  /* Send email to devotee */
+  if (updated && EJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+    emailjs.send(EJS_SERVICE_ID, EJS_DEVOTEE_TEMPLATE_ID, {
+      to_email:   updated.email,
+      to_name:    updated.name,
+      service:    updated.service,
+      status:     status,
+      date:       updated.date || '—',
+      slot:       updated.slot || '—',
+      city:       updated.city || '—',
+      admin_note: note || (status === 'Confirmed'
+        ? 'Your booking is confirmed. We will share samagri details shortly.'
+        : 'We regret we are unable to accommodate this request. Please contact us to reschedule.')
+    });
+  }
+
+  renderAdmin(currentFilter);
+}
+
+function renderAdmin(filter) {
+  currentFilter = filter;
+  updateStats();
+  var all = getRequests();
+  var list = filter === 'All' ? all : all.filter(function(r){ return r.status === filter; });
+
+  ['all','pending','confirmed','rejected'].forEach(function(f) {
+    var btn = document.getElementById('filter-' + f);
+    if (btn) { btn.className = (filter === (f === 'all' ? 'All' : f.charAt(0).toUpperCase() + f.slice(1))) ? 'btn btn-primary' : 'btn btn-outline'; }
+  });
+
+  var el = document.getElementById('admin-requests');
+  if (list.length === 0) {
+    el.innerHTML = '<p style="color:var(--muted);font-size:14px;padding:8px 0;">No ' + (filter === 'All' ? '' : filter.toLowerCase() + ' ') + 'requests found.</p>';
+    return;
+  }
+
+  var html = list.slice().reverse().map(function(r) {
+    var statusColor = r.status === 'Confirmed' ? '#eef8f1;color:var(--success)' : r.status === 'Rejected' ? '#fdecea;color:#c0392b' : '#fff3e0;color:#b36a00';
+    var actions = r.status === 'Pending' ? (
+      '<div style="display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;margin-top:10px;">' +
+      '<input id="note-' + r.id + '" placeholder="Admin note (optional)" style="flex:1;min-width:180px;border:1px solid var(--border);border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;"/>' +
+      '<button class="btn btn-primary" style="padding:7px 16px;font-size:13px;" onclick="updateStatus(' + r.id + ',\'Confirmed\')">Confirm</button>' +
+      '<button class="btn btn-secondary" style="padding:7px 16px;font-size:13px;" onclick="updateStatus(' + r.id + ',\'Rejected\')">Reject</button>' +
+      '</div>'
+    ) : (r.adminNote ? '<p style="font-size:13px;color:var(--muted);margin-top:6px;">Note: ' + r.adminNote + '</p>' : '');
+
+    return '<div style="border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin-bottom:14px;">' +
+      '<div style="display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;">' +
+      '<div style="flex:1;min-width:200px;">' +
+      '<p style="font-weight:700;font-size:15px;color:var(--maroon);margin:0 0 4px;">' + r.service + '</p>' +
+      '<p style="font-size:13px;color:var(--muted);margin:0;">👤 ' + r.name + ' &nbsp;·&nbsp; 📞 ' + r.phone + ' &nbsp;·&nbsp; ✉️ ' + r.email + '</p>' +
+      '<p style="font-size:13px;color:var(--muted);margin:4px 0 0;">📅 ' + (r.date || '—') + ' &nbsp;·&nbsp; 🕐 ' + (r.slot || '—') + ' &nbsp;·&nbsp; 📍 ' + (r.city || '—') + '</p>' +
+      (r.address ? '<p style="font-size:13px;color:var(--muted);margin:2px 0 0;">🏠 ' + r.address + '</p>' : '') +
+      (r.notes ? '<p style="font-size:13px;color:var(--muted);margin:4px 0 0;font-style:italic;">📝 ' + r.notes + '</p>' : '') +
+      '<p style="font-size:12px;color:var(--muted);margin:6px 0 0;opacity:.7;">Submitted: ' + r.submitted + '</p>' +
+      '</div>' +
+      '<span class="pill" style="background:' + statusColor + ';flex-shrink:0;">' + r.status + '</span>' +
+      '</div>' +
+      actions +
+      '</div>';
+  }).join('');
+  el.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', function() { renderAdmin('All'); });
+</script>
 </body>
 </html>

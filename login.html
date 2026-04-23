@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Login | Dharm Path — DFW Spiritual Services</title>
-  <meta name="description" content="Login or create a Dharm Path account to manage bookings, view payment history, and access devotee services."/>
+  <meta name="description" content="Login or create a Dharm Path account to manage bookings, access your bookings and devotee services."/>
   <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
@@ -21,14 +21,14 @@
     <a class="logo" href="index.html"><img src="logo.png" alt="Dharm Path — DFW Spiritual Services" class="nav-logo"/></a>
     <div class="nav-tagline">Indian Priest &amp; Spiritual Services</div>
     <nav class="menu">
-      <a href="services.html">Services</a>
-      <a href="education.html">Discourse</a>
-
-      <a href="booking.html">Book Now</a>
       <a href="about.html">About</a>
+      <a href="pooja-seva.html">Pooja Seva</a>
+      <a href="spiritual-seva.html">Spiritual Seva</a>
+      <a href="education.html">Discourses</a>
+      <a href="jyotish.html">Jyotish</a>
+      <a href="booking.html">Book Now</a>
       <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a class="btn btn-primary" href="booking.html">Start Booking</a>
+      <a class="btn btn-login" href="login.html">Login</a>
     </nav>
     <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -47,13 +47,14 @@
     <div class="card">
       <h2 style="margin-top:0;">Login</h2>
       <p style="color:var(--muted);font-size:14px;margin-bottom:20px;">Welcome back — sign in to your Dharm Path account.</p>
-      <form class="quick-form">
-        <input placeholder="Email Address" type="email" style="grid-column:span 2;"/>
-        <input placeholder="Password" type="password" style="grid-column:span 2;"/>
+      <form class="quick-form" id="login-form" novalidate>
+        <input id="login-email" placeholder="Email Address" type="email" style="grid-column:span 2;" required/>
+        <input id="login-password" placeholder="Password" type="password" style="grid-column:span 2;" required/>
         <p style="grid-column:span 2;font-size:13px;color:var(--muted);margin:0;"><a href="#" style="color:var(--saffron);">Forgot password?</a></p>
       </form>
+      <p id="login-error" style="color:#c0392b;font-size:13px;margin:8px 0 0;display:none;"></p>
       <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
-        <a class="btn btn-primary" href="dashboard.html">Login as Devotee</a>
+        <button class="btn btn-primary" type="submit" form="login-form">Login</button>
         <a class="btn btn-secondary" href="admin.html">Admin Demo</a>
       </p>
     </div>
@@ -61,15 +62,16 @@
     <div class="card">
       <h2 style="margin-top:0;">Create Account</h2>
       <p style="color:var(--muted);font-size:14px;margin-bottom:20px;">New to Dharm Path? Create a free account to manage all your bookings.</p>
-      <form class="quick-form">
-        <input placeholder="Full Name" style="grid-column:span 2;"/>
-        <input placeholder="Phone Number"/>
-        <input placeholder="Email Address" type="email"/>
-        <input placeholder="Password" type="password"/>
-        <input placeholder="Confirm Password" type="password"/>
+      <form class="quick-form" id="register-form" novalidate>
+        <input id="reg-name" placeholder="Full Name" style="grid-column:span 2;" required/>
+        <input id="reg-phone" placeholder="Phone Number"/>
+        <input id="reg-email" placeholder="Email Address" type="email" required/>
+        <input id="reg-password" placeholder="Password" type="password" required/>
+        <input id="reg-confirm" placeholder="Confirm Password" type="password" required/>
       </form>
+      <p id="reg-error" style="color:#c0392b;font-size:13px;margin:8px 0 0;display:none;"></p>
       <p style="margin-top:18px;">
-        <a class="btn btn-primary" href="dashboard.html">Create Account</a>
+        <button class="btn btn-primary" type="submit" form="register-form">Create Account</button>
       </p>
       <p style="font-size:12px;color:var(--muted);margin-top:12px;">By registering you agree to our terms of service and privacy policy.</p>
     </div>
@@ -86,7 +88,8 @@
       <div>
         <h4>Pages</h4>
         <p><a href="index.html">Home</a></p>
-        <p><a href="services.html">Services</a></p>
+        <p><a href="pooja-seva.html">Pooja Seva</a>
+      <a href="spiritual-seva.html">Spiritual Seva</a></p>
         <p><a href="education.html">Discourse</a></p>
         <p></p>
         <p><a href="booking.html">Book Now</a></p>
@@ -110,7 +113,48 @@
   </div>
 </footer>
 
+<script src="assets/auth.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/chatbot.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (DP.currentUser()) { window.location.href = 'dashboard.html'; return; }
+
+  var loginErr = document.getElementById('login-error');
+  var regErr   = document.getElementById('reg-error');
+
+  document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    loginErr.style.display = 'none';
+    var result = DP.login(
+      document.getElementById('login-email').value.trim(),
+      document.getElementById('login-password').value
+    );
+    if (result.ok) { window.location.href = 'dashboard.html'; }
+    else { loginErr.textContent = result.error; loginErr.style.display = 'block'; }
+  });
+
+  document.getElementById('register-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    regErr.style.display = 'none';
+    var password = document.getElementById('reg-password').value;
+    var confirm  = document.getElementById('reg-confirm').value;
+    if (password !== confirm) {
+      regErr.textContent = 'Passwords do not match.'; regErr.style.display = 'block'; return;
+    }
+    if (password.length < 6) {
+      regErr.textContent = 'Password must be at least 6 characters.'; regErr.style.display = 'block'; return;
+    }
+    var result = DP.register(
+      document.getElementById('reg-name').value,
+      document.getElementById('reg-phone').value,
+      document.getElementById('reg-email').value.trim(),
+      password
+    );
+    if (result.ok) { window.location.href = 'dashboard.html'; }
+    else { regErr.textContent = result.error; regErr.style.display = 'block'; }
+  });
+});
+</script>
 </body>
 </html>
