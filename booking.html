@@ -26,7 +26,6 @@
       <a href="spiritual-seva.html">Spiritual Seva</a>
       <a href="education.html">Discourses</a>
       <a href="jyotish.html">Jyotish</a>
-      <a href="booking.html">Book Now</a>
       <a href="contact.html">Contact</a>
       <a class="btn btn-login" href="login.html">Login</a>
     </nav>
@@ -135,7 +134,6 @@
       <a href="spiritual-seva.html">Spiritual Seva</a></p>
         <p><a href="education.html">Discourse</a></p>
         <p></p>
-        <p><a href="booking.html">Book Now</a></p>
         <p><a href="about.html">About</a></p>
       </div>
       <div>
@@ -162,15 +160,28 @@
 <script src="assets/chatbot.js"></script>
 <script>
   /* ── EmailJS config ── fill these in after EmailJS setup ── */
-  var EJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-  var EJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-  var EJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+  var EJS_PUBLIC_KEY  = 'iMd9mx6EUAhynJZ8_';
+  var EJS_SERVICE_ID  = 'service_f77y5zn';
+  var EJS_TEMPLATE_ID = 'template_h1gj9xs';
 
   if (EJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
     emailjs.init({ publicKey: EJS_PUBLIC_KEY });
   }
 
 document.addEventListener('DOMContentLoaded', function () {
+  DP.requireAuth();
+
+  /* Pre-fill name/phone/email from logged-in account */
+  var user = DP.currentUser();
+  if (user) {
+    var nameEl  = document.getElementById('bk-name');
+    var phoneEl = document.getElementById('bk-phone');
+    var emailEl = document.getElementById('bk-email');
+    if (nameEl  && !nameEl.value)  nameEl.value  = user.name;
+    if (phoneEl && !phoneEl.value) phoneEl.value = user.phone;
+    if (emailEl && !emailEl.value) emailEl.value = user.email;
+  }
+
   document.getElementById('booking-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var errEl     = document.getElementById('bk-error');
@@ -214,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /* Send email notification to admin via EmailJS */
     if (EJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
       emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, {
-        to_email:  'shukla.garima78@gmail.com',
+        to_email:  'seva@dharmpathusa.com',
         service:   request.service,
         name:      request.name,
         phone:     request.phone,

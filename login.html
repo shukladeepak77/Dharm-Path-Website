@@ -26,7 +26,6 @@
       <a href="spiritual-seva.html">Spiritual Seva</a>
       <a href="education.html">Discourses</a>
       <a href="jyotish.html">Jyotish</a>
-      <a href="booking.html">Book Now</a>
       <a href="contact.html">Contact</a>
       <a class="btn btn-login" href="login.html">Login</a>
     </nav>
@@ -45,18 +44,57 @@
 <section class="section">
   <div class="container grid-2">
     <div class="card">
-      <h2 style="margin-top:0;">Login</h2>
-      <p style="color:var(--muted);font-size:14px;margin-bottom:20px;">Welcome back — sign in to your Dharm Path account.</p>
-      <form class="quick-form" id="login-form" novalidate>
-        <input id="login-email" placeholder="Email Address" type="email" style="grid-column:span 2;" required/>
-        <input id="login-password" placeholder="Password" type="password" style="grid-column:span 2;" required/>
-        <p style="grid-column:span 2;font-size:13px;color:var(--muted);margin:0;"><a href="#" style="color:var(--saffron);">Forgot password?</a></p>
-      </form>
-      <p id="login-error" style="color:#c0392b;font-size:13px;margin:8px 0 0;display:none;"></p>
-      <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
-        <button class="btn btn-primary" type="submit" form="login-form">Login</button>
-        <a class="btn btn-secondary" href="admin.html">Admin Demo</a>
-      </p>
+
+      <!-- VIEW 1: Login -->
+      <div id="view-login">
+        <h2 style="margin-top:0;">Login</h2>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:20px;">Welcome back — sign in to your Dharm Path account.</p>
+        <form class="quick-form" id="login-form" novalidate>
+          <input id="login-email" placeholder="Email Address" type="email" style="grid-column:span 2;" required/>
+          <input id="login-password" placeholder="Password" type="password" style="grid-column:span 2;" required/>
+          <p style="grid-column:span 2;font-size:13px;color:var(--muted);margin:0;"><a href="#" id="forgot-link" style="color:var(--saffron);">Forgot password?</a></p>
+        </form>
+        <p id="login-error" style="color:#c0392b;font-size:13px;margin:8px 0 0;display:none;"></p>
+        <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-primary" type="submit" form="login-form">Login</button>
+          <a class="btn btn-secondary" href="admin.html">Admin Demo</a>
+        </p>
+      </div>
+
+      <!-- VIEW 2: Forgot password — enter email -->
+      <div id="view-reset-1" style="display:none;">
+        <h2 style="margin-top:0;">Reset Password</h2>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:20px;">Enter your account email and we will send you a 6-digit code.</p>
+        <form class="quick-form" id="reset-form-1" novalidate>
+          <input id="reset-email" placeholder="Email Address" type="email" style="grid-column:span 2;" required/>
+        </form>
+        <p id="reset-err-1" style="color:#c0392b;font-size:13px;margin:8px 0 0;display:none;"></p>
+        <p id="reset-dev-hint" style="background:var(--cream);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px;margin:10px 0 0;display:none;">
+          <strong>Code (shown for demo):</strong> <span id="reset-dev-code" style="font-family:monospace;font-size:16px;letter-spacing:3px;color:var(--maroon);"></span>
+        </p>
+        <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-primary" type="submit" form="reset-form-1">Send Code</button>
+          <a href="#" id="back-to-login-1" class="btn btn-secondary">Back to Login</a>
+        </p>
+      </div>
+
+      <!-- VIEW 3: Forgot password — enter code + new password -->
+      <div id="view-reset-2" style="display:none;">
+        <h2 style="margin-top:0;">Enter Code</h2>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:6px;">We sent a 6-digit code to <strong id="reset-email-display"></strong>. Enter it below along with your new password.</p>
+        <form class="quick-form" id="reset-form-2" novalidate>
+          <input id="reset-code" placeholder="6-digit code" type="text" inputmode="numeric" maxlength="6" style="grid-column:span 2;letter-spacing:4px;font-size:18px;font-weight:700;" required/>
+          <input id="reset-newpw" placeholder="New Password" type="password" style="grid-column:span 2;" required/>
+          <input id="reset-confirmpw" placeholder="Confirm New Password" type="password" style="grid-column:span 2;" required/>
+        </form>
+        <p id="reset-err-2" style="color:#c0392b;font-size:13px;margin:8px 0 0;display:none;"></p>
+        <p id="reset-success" style="color:#1f7a4f;font-size:14px;font-weight:600;margin:10px 0 0;display:none;">Password updated! Redirecting to login…</p>
+        <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-primary" type="submit" form="reset-form-2">Reset Password</button>
+          <a href="#" id="resend-link" class="btn btn-secondary">Resend Code</a>
+        </p>
+      </div>
+
     </div>
 
     <div class="card">
@@ -92,7 +130,6 @@
       <a href="spiritual-seva.html">Spiritual Seva</a></p>
         <p><a href="education.html">Discourse</a></p>
         <p></p>
-        <p><a href="booking.html">Book Now</a></p>
         <p><a href="about.html">About</a></p>
       </div>
       <div>
@@ -113,16 +150,24 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="assets/auth.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/chatbot.js"></script>
 <script>
+  /* EmailJS reset template — create a template with variables: to_email, to_name, code */
+  var EJS_PUBLIC_KEY       = 'iMd9mx6EUAhynJZ8_';
+  var EJS_SERVICE_ID       = 'service_f77y5zn';
+  var EJS_RESET_TEMPLATE   = 'YOUR_RESET_TEMPLATE_ID'; /* replace after creating the template */
+  if (EJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') { emailjs.init({ publicKey: EJS_PUBLIC_KEY }); }
+
 document.addEventListener('DOMContentLoaded', function () {
   if (DP.currentUser()) { window.location.href = 'dashboard.html'; return; }
 
-  var loginErr = document.getElementById('login-error');
-  var regErr   = document.getElementById('reg-error');
+  var returnUrl = new URLSearchParams(window.location.search).get('return') || 'dashboard.html';
 
+  /* ── Login ── */
+  var loginErr = document.getElementById('login-error');
   document.getElementById('login-form').addEventListener('submit', function (e) {
     e.preventDefault();
     loginErr.style.display = 'none';
@@ -130,10 +175,12 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('login-email').value.trim(),
       document.getElementById('login-password').value
     );
-    if (result.ok) { window.location.href = 'dashboard.html'; }
+    if (result.ok) { window.location.href = returnUrl; }
     else { loginErr.textContent = result.error; loginErr.style.display = 'block'; }
   });
 
+  /* ── Register ── */
+  var regErr = document.getElementById('reg-error');
   document.getElementById('register-form').addEventListener('submit', function (e) {
     e.preventDefault();
     regErr.style.display = 'none';
@@ -151,8 +198,74 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('reg-email').value.trim(),
       password
     );
-    if (result.ok) { window.location.href = 'dashboard.html'; }
+    if (result.ok) { window.location.href = returnUrl; }
     else { regErr.textContent = result.error; regErr.style.display = 'block'; }
+  });
+
+  /* ── Forgot password helpers ── */
+  function show(id) {
+    ['view-login','view-reset-1','view-reset-2'].forEach(function(v){ document.getElementById(v).style.display = 'none'; });
+    document.getElementById(id).style.display = '';
+  }
+
+  var pendingEmail = '';
+
+  document.getElementById('forgot-link').addEventListener('click', function (e) { e.preventDefault(); show('view-reset-1'); });
+  document.getElementById('back-to-login-1').addEventListener('click', function (e) { e.preventDefault(); show('view-login'); });
+
+  /* Step 1: send code */
+  document.getElementById('reset-form-1').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var err1  = document.getElementById('reset-err-1');
+    var hint  = document.getElementById('reset-dev-hint');
+    err1.style.display = 'none';
+    hint.style.display = 'none';
+
+    var email  = document.getElementById('reset-email').value.trim();
+    var result = DP.requestReset(email);
+    if (!result.ok) { err1.textContent = result.error; err1.style.display = 'block'; return; }
+
+    pendingEmail = email;
+
+    /* Try to send via EmailJS; show code on-screen as fallback */
+    if (EJS_RESET_TEMPLATE !== 'YOUR_RESET_TEMPLATE_ID') {
+      emailjs.send(EJS_SERVICE_ID, EJS_RESET_TEMPLATE, { to_email: email, to_name: result.name, code: result.code });
+    } else {
+      document.getElementById('reset-dev-code').textContent = result.code;
+      hint.style.display = 'block';
+    }
+
+    document.getElementById('reset-email-display').textContent = email;
+    show('view-reset-2');
+  });
+
+  /* Resend */
+  document.getElementById('resend-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('reset-email').value = pendingEmail;
+    show('view-reset-1');
+    document.getElementById('reset-form-1').dispatchEvent(new Event('submit'));
+  });
+
+  /* Step 2: verify code + set new password */
+  document.getElementById('reset-form-2').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var err2    = document.getElementById('reset-err-2');
+    var success = document.getElementById('reset-success');
+    err2.style.display = 'none';
+    success.style.display = 'none';
+
+    var code    = document.getElementById('reset-code').value.trim();
+    var newpw   = document.getElementById('reset-newpw').value;
+    var confirm = document.getElementById('reset-confirmpw').value;
+
+    if (newpw !== confirm) { err2.textContent = 'Passwords do not match.'; err2.style.display = 'block'; return; }
+
+    var result = DP.resetPassword(pendingEmail, code, newpw);
+    if (!result.ok) { err2.textContent = result.error; err2.style.display = 'block'; return; }
+
+    success.style.display = 'block';
+    setTimeout(function () { show('view-login'); }, 2000);
   });
 });
 </script>
