@@ -19,7 +19,7 @@ We're available <b>Mon–Sun, 8am–9pm CST</b>. 🙏`
 📖 <b>Path & Katha</b> — Sunder Kand, Ramcharitmanas, Durga Saptashati, Akhand Path<br>
 🎶 <b>Bhakti Events</b> — Bhajan Sandhya, Mata Ki Chowki, Jagran, Sankirtan<br>
 🔮 <b>Jyotish</b> — Kundli reading, Muhurat, Kundli matching<br>
-📚 <b>Spiritual Sessions</b> — Online Zoom sessions & in-person DFW gatherings<br><br>
+📚 <b>Spiritual Sessions</b> — Online Zoom sessions & in-person gatherings across the USA<br><br>
 👉 <a href="pooja-seva.html" style="color:#d96a00;text-decoration:underline">Pooja Seva →</a><br>
 👉 <a href="spiritual-seva.html" style="color:#d96a00;text-decoration:underline">Spiritual Seva →</a>`
     },
@@ -28,7 +28,7 @@ We're available <b>Mon–Sun, 8am–9pm CST</b>. 🙏`
       ans: `Booking is simple! Here's how:<br><br>
 1️⃣ Visit our <a href="booking.html" style="color:#d96a00;text-decoration:underline">Booking Page</a><br>
 2️⃣ Select your service, date & time<br>
-3️⃣ Choose in-person (DFW) or online (Zoom)<br>
+3️⃣ Choose in-person or online (Zoom)<br>
 4️⃣ Submit your details — we confirm within a few hours<br><br>
 Or WhatsApp us directly: 📞 <b>(214)945-5080</b>`
     },
@@ -39,12 +39,11 @@ Or WhatsApp us directly: 📞 <b>(214)945-5080</b>`
 💬 WhatsApp — same number`
     },
     {
-      re: /city|cities|area|location|dallas|plano|frisco|mckinney|allen|irving|dfw/i,
-      ans: `We serve the entire <b>DFW metroplex</b>:<br><br>
-📍 Dallas · Plano · Frisco<br>
-📍 McKinney · Allen · Irving<br>
-📍 Celina · Melissa · Anna<br><br>
-Tell us your location when booking — we come to you!`
+      re: /city|cities|area|location|dallas|plano|frisco|mckinney|allen|irving|dfw|nationwide|usa|states/i,
+      ans: `We serve families <b>across the United States</b>:<br><br>
+💻 Online (Zoom) — available to all families nationwide<br>
+📍 In-person — currently in DFW (TX) and expanding nationally<br><br>
+Tell us your location when booking and we will coordinate with you!`
     },
     {
       re: /online|zoom|virtual|remote/i,
@@ -63,7 +62,7 @@ Select <b>"Online (Zoom)"</b> when booking, or WhatsApp us to discuss.`
 🔔 Upanishads<br>
 🙏 Naam Jap<br>
 🎶 Bhajans & Sankirtan<br><br>
-<b>Weekly on Zoom</b> · <b>Monthly in-person DFW</b><br>All are welcome — no prior knowledge needed.<br><br>
+<b>Weekly on Zoom</b> · <b>Monthly in-person (select locations)</b><br>All are welcome — no prior knowledge needed.<br><br>
 👉 <a href="education.html" style="color:#d96a00;text-decoration:underline">Register for sessions →</a>`
     },
     {
@@ -73,7 +72,7 @@ Select <b>"Online (Zoom)"</b> when booking, or WhatsApp us to discuss.`
 📅 Muhurat selection<br>
 💑 Kundli Milan (marriage matching)<br>
 ⚡ Graha dosh remedies<br><br>
-Available online (Zoom) or in-person across DFW.<br>
+Available online (Zoom) or in-person.<br>
 📞 <b>(214)945-5080</b> to schedule a session.`
     },
     {
@@ -99,8 +98,7 @@ Mention any questions in the booking form or ask us on WhatsApp.`
     },
     {
       re: /about|who|team|priest|pandit|founder/i,
-      ans: `<b>Dharm Path</b> was founded to bring authentic Indian devotional services to the DFW community — with ease, dignity, and reverence.<br><br>
-We serve families across Dallas, Plano, Frisco, McKinney, Allen and Irving.<br><br>
+      ans: `<b>Dharma Path USA Foundation</b> is a non-profit dedicated to Sanatan Dharma awareness, Vedic rituals, scripture teachings, and community outreach — serving families across the United States with ease, dignity, and reverence.<br><br>
 👉 <a href="about.html" style="color:#d96a00;text-decoration:underline">Read our full story →</a>`
     },
     {
@@ -220,7 +218,7 @@ We serve families across Dallas, Plano, Frisco, McKinney, Allen and Irving.<br><
             <div class="dp-inv-av">🕉️</div>
             <div>
               <div class="dp-inv-title">Chat with Us</div>
-              <div class="dp-inv-sub">Dharm Path Support</div>
+              <div class="dp-inv-sub">Dharma Path Support</div>
             </div>
           </div>
           <p class="dp-inv-msg">🙏 Have questions about our services, bookings, or spiritual sessions? We're here to help!</p>
@@ -236,11 +234,11 @@ We serve families across Dallas, Plano, Frisco, McKinney, Allen and Irving.<br><
       </div>
 
       <!-- Chat window -->
-      <div id="dp-win" role="dialog" aria-label="Dharm Path Support Chat">
+      <div id="dp-win" role="dialog" aria-label="Dharma Path Support Chat">
         <div id="dp-head">
           <div class="dp-hav">🕉️</div>
           <div class="dp-hinf">
-            <strong>Dharm Path Support</strong>
+            <strong>Dharma Path Support</strong>
             <small><span class="dp-onl"></span> Online — here to help</small>
           </div>
           <div class="dp-hbtns">
@@ -313,7 +311,7 @@ We serve families across Dallas, Plano, Frisco, McKinney, Allen and Irving.<br><
     { label: '📋 Services',          val: 'What services do you offer?' },
     { label: '📅 Book a Service',    val: 'How do I book a service?' },
     { label: '🔮 Jyotish',             val: 'Tell me about Jyotish' },
-    { label: '📍 DFW Areas',          val: 'Which cities do you serve?' },
+    { label: '🇺🇸 Where We Serve',    val: 'Which cities do you serve?' },
     { label: '📚 Spiritual Sessions',val: 'Tell me about spiritual sessions' },
     { label: '📱 Live Chat',         val: 'I want to chat live' },
   ];
@@ -343,7 +341,7 @@ We serve families across Dallas, Plano, Frisco, McKinney, Allen and Irving.<br><
       setTimeout(() => {
         dots.remove();
         botMsg(
-          `🙏 Jai Shri Ram, <b>${userName}</b>! Welcome to Dharm Path.<br>How can we help you today?`,
+          `🙏 Jai Shri Ram, <b>${userName}</b>! Welcome to Dharma Path USA Foundation.<br>How can we help you today?`,
           MAIN_QUICK
         );
       }, 700);
@@ -417,7 +415,7 @@ We serve families across Dallas, Plano, Frisco, McKinney, Allen and Irving.<br><
 
     // Opening greeting
     setTimeout(() => {
-      botMsg(`🙏 <b>Jai Shri Ram!</b> Welcome to <b>Dharm Path</b>.<br><br>May I know your name to get started?`);
+      botMsg(`🙏 <b>Jai Shri Ram!</b> Welcome to <b>Dharma Path USA Foundation</b>.<br><br>May I know your name to get started?`);
     }, 400);
 
     // Show invite bubble immediately on load — stays visible until booking form is touched or user dismisses it

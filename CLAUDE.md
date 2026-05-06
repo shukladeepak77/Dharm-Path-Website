@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Dharm Path** — a static HTML mockup for a DFW-area Indian spiritual services business. Used for planning, pitching, and design review. No build step, no framework, no backend.
+**Dharma Path USA Foundation** — a static HTML website for a nationwide Indian spiritual non-profit corporation. Provides Sanatan/Vaidik awareness, Vedic rituals, prayer gatherings, scripture teachings, and community outreach across the United States. Used for planning, pitching, and design review. No build step, no framework, no backend.
 
 ## Running the Site
 
