@@ -5,57 +5,57 @@
   const RESPONSES = [
     {
       re: /live|whatsapp|call|speak|talk.*person|human|agent|real person|connect/i,
-      ans: `Sure! Connect with us live right now:<br><br>
+      ans: `Sure! Connect with us right now:<br><br>
 💬 <b>WhatsApp</b> — fastest way to reach us<br>
-<a href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path%20services." target="_blank" style="display:inline-block;margin-top:8px;padding:9px 18px;background:#25d366;color:#fff;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;">📱 Open WhatsApp Chat</a><br><br>
+<a href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharma%20Path%20USA%20Foundation." target="_blank" style="display:inline-block;margin-top:8px;padding:9px 18px;background:#25d366;color:#fff;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;">📱 Open WhatsApp Chat</a><br><br>
 📞 <b>Call:</b> (214)945-5080<br>
-✉️ <b>Email:</b> seva@dharmpath.com<br><br>
-We're available <b>Mon–Sun, 8am–9pm CST</b>. 🙏`
+✉️ <b>Email:</b> seva@dharmpathusa.com<br><br>
+We're here <b>Mon–Sun, 8am–9pm CST</b>. 🙏`
     },
     {
-      re: /service|offer|pooja|puja|path|katha|bhajan|jagran|havan|yagya|chowki|sandhya/i,
-      ans: `We offer a wide range of devotional services:<br><br>
-🕉️ <b>Priest Services</b> — Griha Pravesh, Satyanarayan Katha, Ganesh/Lakshmi Pooja, Navgraha, Rudrabhishek<br>
-📖 <b>Path & Katha</b> — Sunder Kand, Ramcharitmanas, Durga Saptashati, Akhand Path<br>
-🎶 <b>Bhakti Events</b> — Bhajan Sandhya, Mata Ki Chowki, Jagran, Sankirtan<br>
-🔮 <b>Jyotish</b> — Kundli reading, Muhurat, Kundli matching<br>
-📚 <b>Spiritual Sessions</b> — Online Zoom sessions & in-person gatherings across the USA<br><br>
-👉 <a href="pooja-seva.html" style="color:#d96a00;text-decoration:underline">Pooja Seva →</a><br>
-👉 <a href="spiritual-seva.html" style="color:#d96a00;text-decoration:underline">Spiritual Seva →</a>`
-    },
-    {
-      re: /book|appoint|schedul|reserv|slot/i,
-      ans: `Booking is simple! Here's how:<br><br>
-1️⃣ Visit our <a href="booking.html" style="color:#d96a00;text-decoration:underline">Booking Page</a><br>
-2️⃣ Select your service, date & time<br>
+      re: /book|appoint|schedul|reserv|slot|request|how do i/i,
+      ans: `Requesting a seva is simple:<br><br>
+1️⃣ Visit our <a href="booking.html" style="color:#d96a00;text-decoration:underline">Seva Request page</a><br>
+2️⃣ Share the type of seva and your preferred date<br>
 3️⃣ Choose in-person or online (Zoom)<br>
-4️⃣ Submit your details — we confirm within a few hours<br><br>
-Or WhatsApp us directly: 📞 <b>(214)945-5080</b>`
+4️⃣ Submit your details — we will reach out to confirm<br><br>
+Or connect with us on WhatsApp: 📞 <b>(214)945-5080</b>`
+    },
+    {
+      re: /seva|community|program|pooja|puja|path|katha|bhajan|jagran|havan|yagya|chowki|sandhya|what do you do|activities/i,
+      ans: `At Dharma Path USA Foundation, our community seva includes:<br><br>
+🧘 <b>Spiritual Guidance</b> — personal guidance on dharma, scriptures and life<br>
+🎶 <b>Bhajan, Satsang & Sundar Kand</b> — devotional gatherings open to all<br>
+📚 <b>Children & Sanskar</b> — dharma education for the next generation<br>
+💛 <b>Emotional & Spiritual Support</b> — compassionate support during difficult times<br>
+🪔 <b>Festival & Cultural Programs</b> — celebrating and preserving our heritage<br>
+🤝 <b>Charity & Volunteer Seva</b> — giving back to the community<br><br>
+👉 <a href="community-seva.html" style="color:#d96a00;text-decoration:underline">Our Community Seva →</a>`
     },
     {
       re: /price|cost|fee|charge|rate|how much|dollar|\$/i,
-      ans: `We serve with full devotion. Please reach out to us directly to discuss your seva and we will be happy to guide you.<br><br>
+      ans: `Please reach out to us directly and we will be happy to guide you.<br><br>
 📞 <b>(214)945-5080</b><br>
 💬 WhatsApp — same number`
     },
     {
       re: /city|cities|area|location|dallas|plano|frisco|mckinney|allen|irving|dfw|nationwide|usa|states/i,
-      ans: `We serve families <b>across the United States</b>:<br><br>
-💻 Online (Zoom) — available to all families nationwide<br>
-📍 In-person — currently in DFW (TX) and expanding nationally<br><br>
-Tell us your location when booking and we will coordinate with you!`
+      ans: `We connect with families near and far:<br><br>
+💻 <b>Online (Zoom)</b> — available to all families<br>
+📍 <b>In-person</b> — currently in DFW (TX) and expanding<br><br>
+Share your location when you reach out and we will coordinate with you!`
     },
     {
       re: /online|zoom|virtual|remote/i,
-      ans: `Yes! Many services are available <b>online via Zoom</b>:<br><br>
-💻 Jyotish consultations<br>
-💻 Spiritual Sessions (weekly)<br>
-💻 Some path & katha sessions<br><br>
-Select <b>"Online (Zoom)"</b> when booking, or WhatsApp us to discuss.`
+      ans: `Yes! Many of our programs are available <b>online via Zoom</b>:<br><br>
+💻 Jyotish guidance<br>
+💻 Spiritual sessions (weekly)<br>
+💻 Satsang and path sessions<br><br>
+WhatsApp us to know more: 📞 <b>(214)945-5080</b>`
     },
     {
-      re: /education|session|gita|ramayan|manas|upanishad|naam.?jap|learn|class/i,
-      ans: `Our <b>Spiritual Sessions</b>:<br><br>
+      re: /education|session|gita|ramayan|manas|upanishad|naam.?jap|learn|class|discourse/i,
+      ans: `Our <b>Spiritual Gatherings</b> cover:<br><br>
 📜 Shree Ram Charit Manas<br>
 🌸 Bhagwad Gita<br>
 ✨ Ashtavakra Gita<br>
@@ -63,47 +63,47 @@ Select <b>"Online (Zoom)"</b> when booking, or WhatsApp us to discuss.`
 🙏 Naam Jap<br>
 🎶 Bhajans & Sankirtan<br><br>
 <b>Weekly on Zoom</b> · <b>Monthly in-person (select locations)</b><br>All are welcome — no prior knowledge needed.<br><br>
-👉 <a href="education.html" style="color:#d96a00;text-decoration:underline">Register for sessions →</a>`
+👉 <a href="education.html" style="color:#d96a00;text-decoration:underline">Learn more →</a>`
     },
     {
       re: /jyotish|kundli|kundali|horoscope|astro|rashi|muhurat/i,
-      ans: `Our <b>Jyotish Services</b>:<br><br>
+      ans: `<b>Jyotish Guidance</b> we offer:<br><br>
 🔮 Kundli reading & analysis<br>
 📅 Muhurat selection<br>
 💑 Kundli Milan (marriage matching)<br>
-⚡ Graha dosh remedies<br><br>
-Available online (Zoom) or in-person.<br>
-📞 <b>(214)945-5080</b> to schedule a session.`
+⚡ Graha dosh guidance<br><br>
+Available online (Zoom) or in-person. Reach out to connect:<br>
+📞 <b>(214)945-5080</b>`
     },
     {
       re: /contact|phone|email|reach/i,
       ans: `Reach us anytime:<br><br>
 📞 <b>(214)945-5080</b><br>
 💬 <b>WhatsApp</b> — same number<br>
-✉️ <b>seva@dharmpath.com</b><br><br>
+✉️ <b>seva@dharmpathusa.com</b><br><br>
 WhatsApp is the fastest way to reach us.<br>
 👉 <a href="contact.html" style="color:#d96a00;text-decoration:underline">Contact page →</a>`
     },
     {
-      re: /payment|pay|advance|deposit|refund|cancel/i,
-      ans: `For cancellations or rescheduling, please notify us <b>48 hours in advance</b> so we can accommodate other families.<br><br>
+      re: /cancel|reschedul|postpone/i,
+      ans: `Please let us know at least <b>48 hours in advance</b> if you need to reschedule, so we can accommodate everyone.<br><br>
 📞 <b>(214)945-5080</b> — call or WhatsApp anytime.`
     },
     {
       re: /samagri|material|item|need|bring|prepare/i,
-      ans: `We guide you on all <b>pooja samagri</b>! When you book, we either:<br><br>
+      ans: `We guide you on all <b>pooja samagri</b>! Once your seva is confirmed, we either:<br><br>
 ✅ Bring all samagri ourselves, or<br>
 ✅ Share a preparation checklist in advance<br><br>
-Mention any questions in the booking form or ask us on WhatsApp.`
+Feel free to ask us on WhatsApp for any guidance.`
     },
     {
       re: /about|who|team|priest|pandit|founder/i,
-      ans: `<b>Dharma Path USA Foundation</b> is a non-profit dedicated to Sanatan Dharma awareness, Vedic rituals, scripture teachings, and community outreach — serving families across the United States with ease, dignity, and reverence.<br><br>
+      ans: `<b>Dharma Path USA Foundation</b> is a non-profit community organization rooted in Sanatan Dharma — dedicated to spreading Vaidik awareness, nurturing spiritual growth and serving families through devotional gatherings, scripture teachings and compassionate seva.<br><br>
 👉 <a href="about.html" style="color:#d96a00;text-decoration:underline">Read our full story →</a>`
     },
     {
       re: /hello|hi |namaste|jai|pranam|namaskar|hare|ram|krishna/i,
-      ans: `🙏 Jai Shri Ram! Wonderful to have you here.<br><br>How can we help you today?`
+      ans: `🙏 Jai Shri Ram! Wonderful to have you here.<br><br>How can we assist you today?`
     },
   ];
 
@@ -221,10 +221,10 @@ Mention any questions in the booking form or ask us on WhatsApp.`
               <div class="dp-inv-sub">Dharma Path Support</div>
             </div>
           </div>
-          <p class="dp-inv-msg">🙏 Have questions about our services, bookings, or spiritual sessions? We're here to help!</p>
+          <p class="dp-inv-msg">🙏 Have questions about our community seva or spiritual gatherings? We're here to help!</p>
           <div class="dp-inv-btns">
             <button class="dp-inv-btn primary" id="dp-invite-open">Start Chat</button>
-            <a class="dp-inv-btn secondary" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank" style="text-align:center;text-decoration:none;">💬 WhatsApp</a>
+            <a class="dp-inv-btn secondary" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharma%20Path%20USA%20Foundation." target="_blank" style="text-align:center;text-decoration:none;">💬 WhatsApp</a>
           </div>
         </div>
         <div class="dp-inv-footer">
@@ -242,13 +242,13 @@ Mention any questions in the booking form or ask us on WhatsApp.`
             <small><span class="dp-onl"></span> Online — here to help</small>
           </div>
           <div class="dp-hbtns">
-            <a class="dp-hbtn" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank" title="Chat on WhatsApp" style="text-decoration:none;">📱</a>
+            <a class="dp-hbtn" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharma%20Path%20USA%20Foundation." target="_blank" title="Chat on WhatsApp" style="text-decoration:none;">📱</a>
             <button class="dp-hbtn" id="dp-x" aria-label="Close">✕</button>
           </div>
         </div>
         <div id="dp-sub">
           <div class="dp-sub-txt">Need to talk to someone right now?</div>
-          <a class="dp-live-btn" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharm%20Path." target="_blank">
+          <a class="dp-live-btn" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharma%20Path%20USA%20Foundation." target="_blank">
             📱 Live on WhatsApp
           </a>
         </div>
@@ -308,18 +308,18 @@ Mention any questions in the booking form or ask us on WhatsApp.`
   }
 
   const MAIN_QUICK = [
-    { label: '📋 Services',          val: 'What services do you offer?' },
-    { label: '📅 Book a Service',    val: 'How do I book a service?' },
-    { label: '🔮 Jyotish',             val: 'Tell me about Jyotish' },
-    { label: '🇺🇸 Where We Serve',    val: 'Which cities do you serve?' },
-    { label: '📚 Spiritual Sessions',val: 'Tell me about spiritual sessions' },
-    { label: '📱 Live Chat',         val: 'I want to chat live' },
+    { label: '🕉️ Our Seva',           val: 'Tell me about your community seva' },
+    { label: '📅 Request Seva',       val: 'How do I request a seva?' },
+    { label: '🔮 Jyotish',            val: 'Tell me about Jyotish' },
+    { label: '📚 Spiritual Gatherings', val: 'Tell me about spiritual sessions' },
+    { label: '📍 Where We Are',       val: 'Which cities do you serve?' },
+    { label: '📱 Connect Live',       val: 'I want to chat live' },
   ];
 
   const BACK_QUICK = [
-    { label: '📋 Services',    val: 'What services do you offer?' },
-    { label: '📅 Book Now',    val: 'How do I book a service?' },
-    { label: '📱 Live Chat',   val: 'I want to chat live' },
+    { label: '🕉️ Our Seva',     val: 'Tell me about your community seva' },
+    { label: '📅 Request Seva', val: 'How do I request a seva?' },
+    { label: '📱 Connect Live', val: 'I want to chat live' },
   ];
 
   /* ── Input handling ──────────────────────────────────────── */

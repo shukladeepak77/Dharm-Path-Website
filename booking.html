@@ -37,7 +37,7 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a> / Request Seva</div>
     <h1>Request a Seva</h1>
-    <p class="section-intro" style="margin-bottom:0;">Submit your booking request — we will review availability and confirm or suggest an alternative date.</p>
+    <p class="section-intro" style="margin-bottom:0;">Submit your seva request — we will review availability and confirm or suggest an alternative date.</p>
   </div>
 </section>
 
@@ -48,39 +48,22 @@
       <form class="quick-form" id="booking-form" novalidate>
 
         <select style="grid-column:span 2;" id="bk-service" required>
-          <option value="">Select Service</option>
-          <optgroup label="── Pooja Seva ──">
-            <option>Satyanarayan Katha</option>
-            <option>Griha Pravesh</option>
-            <option>Vivah Sanskar</option>
-            <option>Vahana Pooja</option>
-            <option>Ganesh Pooja</option>
-            <option>Rudrabhishek</option>
-            <option>Navgraha Pooja &amp; Shanti</option>
-            <option>Vaastu Pooja</option>
-            <option>Namkaran Sanskar</option>
-            <option>Mundan Sanskar</option>
-          </optgroup>
-          <optgroup label="── Spiritual Seva ──">
-            <option>Sunder Kand Path</option>
-            <option>Ramcharitmanas Path</option>
-            <option>Durga Saptashati</option>
-            <option>Hanuman Chalisa Path</option>
-            <option>Akhand Path</option>
-            <option>Bhajan Sandhya</option>
-            <option>Mata Ki Chowki</option>
-          </optgroup>
+          <option value="">Select Seva</option>
+          <option>Sunder Kand Path</option>
+          <option>Ramcharitmanas Path</option>
+          <option>Durga Saptashati</option>
+          <option>Hanuman Chalisa Path</option>
+          <option>Akhand Path</option>
+          <option>Bhajan Sandhya</option>
+          <option>Mata Ki Chowki</option>
+          <option>Other (please describe in notes)</option>
         </select>
 
         <select id="bk-slot"><option>Preferred Time Slot</option><option>Morning (7–10am)</option><option>Afternoon (11am–2pm)</option><option>Evening (5–8pm)</option></select>
         <input type="date" id="bk-date"/>
         <select id="bk-city"><option>City / State</option><option>Dallas, TX</option><option>Plano, TX</option><option>Frisco, TX</option><option>McKinney, TX</option><option>Allen, TX</option><option>Irving, TX</option><option>Celina, TX</option><option>Melissa, TX</option><option>Anna, TX</option><option>Other Location (specify in notes)</option><option>Online (Zoom)</option></select>
         <input id="bk-name" placeholder="Full Name" required/>
-        <input id="bk-phone" placeholder="Phone Number" required/>
         <input id="bk-email" placeholder="Email Address" type="email" required/>
-        <input id="bk-address" placeholder="Service Address" style="grid-column:span 2;"/>
-        <input id="bk-gotra" placeholder="Gotra (optional)"/>
-        <input id="bk-attendees" placeholder="Number of Attendees (approx.)"/>
         <textarea id="bk-notes" placeholder="Special instructions, event notes, or anything else we should know…" style="grid-column:span 2;"></textarea>
       </form>
       <p id="bk-error" style="color:#c0392b;font-size:13px;margin:8px 0 0;display:none;"></p>
@@ -171,14 +154,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   DP.requireAuth();
 
-  /* Pre-fill name/phone/email from logged-in account */
+  /* Pre-fill name/email from logged-in account */
   var user = DP.currentUser();
   if (user) {
     var nameEl  = document.getElementById('bk-name');
-    var phoneEl = document.getElementById('bk-phone');
     var emailEl = document.getElementById('bk-email');
     if (nameEl  && !nameEl.value)  nameEl.value  = user.name;
-    if (phoneEl && !phoneEl.value) phoneEl.value = user.phone;
     if (emailEl && !emailEl.value) emailEl.value = user.email;
   }
 
@@ -191,12 +172,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var service = document.getElementById('bk-service').value;
     var name    = document.getElementById('bk-name').value.trim();
-    var phone   = document.getElementById('bk-phone').value.trim();
     var email   = document.getElementById('bk-email').value.trim();
 
     if (!service) { errEl.textContent = 'Please select a service.'; errEl.style.display = 'block'; return; }
     if (!name)    { errEl.textContent = 'Please enter your name.'; errEl.style.display = 'block'; return; }
-    if (!phone)   { errEl.textContent = 'Please enter your phone number.'; errEl.style.display = 'block'; return; }
     if (!email)   { errEl.textContent = 'Please enter your email address.'; errEl.style.display = 'block'; return; }
 
     var submitted = new Date().toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
@@ -207,11 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
       date:      document.getElementById('bk-date').value,
       city:      document.getElementById('bk-city').value,
       name:      name,
-      phone:     phone,
       email:     email.toLowerCase(),
-      address:   document.getElementById('bk-address').value,
-      gotra:     document.getElementById('bk-gotra').value,
-      attendees: document.getElementById('bk-attendees').value,
       notes:     document.getElementById('bk-notes').value,
       status:    'Pending',
       adminNote: '',
@@ -228,14 +203,10 @@ document.addEventListener('DOMContentLoaded', function () {
         to_email:  'seva@dharmpathusa.com',
         service:   request.service,
         name:      request.name,
-        phone:     request.phone,
         email:     request.email,
         date:      request.date || '—',
         slot:      request.slot,
         city:      request.city,
-        address:   request.address || '—',
-        gotra:     request.gotra || '—',
-        attendees: request.attendees || '—',
         notes:     request.notes || '—',
         submitted: submitted
       });

@@ -73,7 +73,7 @@ li { margin-bottom: 6px; }
 /* ── Nav Tagline ───────────────────────────────────────── */
 .nav-tagline {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   background: linear-gradient(90deg, var(--maroon), var(--saffron), var(--gold));
   -webkit-background-clip: text;
@@ -94,10 +94,11 @@ li { margin-bottom: 6px; }
 }
 .logo:hover { opacity: 0.85; }
 .nav-logo {
-  height: 120px;
+  height: 150px;
   width: auto;
   display: block;
   object-fit: contain;
+  margin-left: -24px;
 }
 .footer-logo {
   height: 90px;
@@ -594,7 +595,9 @@ li { margin-bottom: 6px; }
   .stats-row,
   .grid-4,
   .grid-3,
-  .grid-2 { grid-template-columns: 1fr; }
+  .grid-2,
+  #view-player .container > div[style*="grid-template-columns"],
+  #samagri-grid { grid-template-columns: 1fr 1fr !important; }
 
   .menu {
     display: none;

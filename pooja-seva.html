@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Pooja Seva | Dharma Path USA Foundation</title>
-  <meta name="description" content="Authentic Vedic priest services — Satyanarayan Katha, Griha Pravesh, Vivah Sanskar, Rudrabhishek, Navgraha Pooja and more. Available in-person and online across the USA."/>
+  <title>Guided Pooja Seva | Dharma Path USA Foundation</title>
+  <meta name="description" content="Guided Pooja Seva — step-by-step Vedic pooja guidance for families to perform sacred rituals themselves with devotion, correct vidhi and full reverence."/>
   <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
 
 <div class="topbar">
   <div class="container">
-    <div>🕉️ Serving Families Across the United States — Sanatan Dharma · Vedic Services · Community Outreach</div>
     <div>📞 (214)945-5080</div>
   </div>
 </div>
@@ -19,9 +18,10 @@
 <header class="header">
   <div class="container nav">
     <a class="logo" href="index.html"><img src="logo.png" alt="Dharma Path USA Foundation" class="nav-logo"/></a>
-    <div class="nav-tagline">Sanatan Dharma · Vedic Services · Community Outreach</div>
+    <div class="nav-tagline">Sanatan Dharma<br/>Vedic Awareness<br/>Community Outreach</div>
     <nav class="menu">
       <a href="about.html">About</a>
+      <a href="community-seva.html">Community Seva</a>
       <a href="pooja-seva.html">Pooja Seva</a>
       <a href="spiritual-seva.html">Spiritual Seva</a>
       <a href="education.html">Discourses</a>
@@ -35,100 +35,154 @@
 
 <section class="page-hero" style="padding:24px 0 16px;">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Pooja Seva</div>
-    <h1 style="font-size:1.6rem;margin:4px 0 2px;">Pooja Seva</h1>
-    <p style="font-size:13px;color:var(--muted);margin:0;">Vedic priest services — performed with full devotion and reverence for tradition. Available in-person and online across the United States.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span id="breadcrumb-label">Guided Pooja Seva</span></div>
+    <h1 id="page-title" style="font-size:1.6rem;margin:4px 0 2px;">Guided Pooja Seva</h1>
+    <p id="page-sub" style="font-size:13px;color:var(--muted);margin:0;">Step-by-step Vedic pooja guidance — empowering families to perform sacred rituals at home with devotion, correct vidhi and full reverence.</p>
   </div>
 </section>
 
-<section class="section" style="padding-top:16px;">
+<!-- ── POOJA GRID VIEW ─────────────────────────────────── -->
+<section class="section" id="view-grid" style="padding-top:16px;">
   <div class="container">
-    <div class="grid-3">
 
-      <div class="service-card">
-        <div class="icon">🕉️</div>
-        <h3>Satyanarayan Katha</h3>
-        <p>Auspicious katha for peace, prosperity and divine blessings.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
+    <div style="background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:28px;display:flex;gap:14px;align-items:flex-start;">
+      <span style="font-size:24px;flex-shrink:0;">🪔</span>
+      <div>
+        <strong style="color:var(--maroon);">What is Guided Pooja Seva?</strong>
+        <p style="margin:6px 0 0;font-size:14px;color:var(--muted);">Our guided pooja seva empowers your family to perform sacred Vedic rituals at home — with step-by-step video guidance, correct mantras, samagri lists and full vidhi. No priest needed. Perform with devotion, in your own home, at your own pace.</p>
+      </div>
+    </div>
+
+    <div class="grid-3" id="pooja-grid">
+
+      <!-- Satyanarayan — Available -->
+      <div class="service-card" style="position:relative;cursor:pointer;" onclick="beginPooja()">
+        <span style="position:absolute;top:14px;right:14px;background:var(--maroon);color:#fff;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;">Available</span>
+        <div class="icon">🪔</div>
+        <h3>Satyanarayan Pooja</h3>
+        <p>Guided step-by-step experience — video guidance, mantras and samagri checklist for your family to follow at home.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0;">
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:12px;color:var(--muted);">60–90 mins</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:12px;color:var(--muted);">Family Pooja</span>
+        </div>
+        <button class="btn btn-primary" style="width:100%;text-align:center;" onclick="beginPooja()">▶ Begin Guided Pooja</button>
       </div>
 
-      <div class="service-card">
-        <div class="icon">🏠</div>
-        <h3>Griha Pravesh</h3>
-        <p>Vedic housewarming ceremony with full vidhi, mantra chanting and samagri guidance for your new home.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">💒</div>
-        <h3>Vivah Sanskar</h3>
-        <p>Complete Vedic wedding ceremony with saat pheras, sacred mantras and all marriage samskaras.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">🚗</div>
-        <h3>Vahana Pooja</h3>
-        <p>Vedic blessings for your new vehicle with prayers and mantras for a safe and auspicious journey ahead.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
-      </div>
-
-      <div class="service-card">
+      <!-- Coming Soon cards -->
+      <div class="service-card" style="opacity:0.6;">
+        <span style="display:inline-block;background:#f4f4f4;color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;margin-bottom:8px;">Coming Soon</span>
         <div class="icon">🐘</div>
         <h3>Ganesh Pooja</h3>
-        <p>Invocation of Lord Ganesha to remove obstacles and seek blessings for new beginnings and auspicious ventures.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
+        <p>Guided invocation of Lord Ganesha — step-by-step vidhi and mantras for new beginnings.</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" style="opacity:0.6;">
+        <span style="display:inline-block;background:#f4f4f4;color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;margin-bottom:8px;">Coming Soon</span>
+        <div class="icon">🏠</div>
+        <h3>Griha Pravesh</h3>
+        <p>Complete guidance for your Vedic housewarming — vidhi, mantras and samagri checklist.</p>
+      </div>
+
+      <div class="service-card" style="opacity:0.6;">
+        <span style="display:inline-block;background:#f4f4f4;color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;margin-bottom:8px;">Coming Soon</span>
         <div class="icon">🔱</div>
         <h3>Rudrabhishek</h3>
-        <p>Sacred abhishek of Lord Shiva with Vedic mantras — performed for health, peace and spiritual upliftment.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
+        <p>Guided abhishek of Lord Shiva — sacred mantras and correct vidhi for peace and upliftment.</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" style="opacity:0.6;">
+        <span style="display:inline-block;background:#f4f4f4;color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;margin-bottom:8px;">Coming Soon</span>
         <div class="icon">🌟</div>
-        <h3>Navgraha Pooja &amp; Shanti</h3>
-        <p>Planetary peace ceremony to balance graha dosha, remove obstacles and restore harmony in family life.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
+        <h3>Navgraha Pooja</h3>
+        <p>Guided planetary peace ceremony — vidhi and mantras to restore harmony in family life.</p>
       </div>
 
-      <div class="service-card">
-        <div class="icon">🏛️</div>
-        <h3>Vaastu Pooja</h3>
-        <p>Purification and sanctifying ceremony to harmonize the energies of your home, business or office space.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
+      <div class="service-card" style="opacity:0.6;">
+        <span style="display:inline-block;background:#f4f4f4;color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;margin-bottom:8px;">Coming Soon</span>
+        <div class="icon">🚗</div>
+        <h3>Vahana Pooja</h3>
+        <p>Guided prayers and mantras to bless your new vehicle — simple and authentic.</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" style="opacity:0.6;">
+        <span style="display:inline-block;background:#f4f4f4;color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;margin-bottom:8px;">Coming Soon</span>
         <div class="icon">👶</div>
         <h3>Namkaran Sanskar</h3>
-        <p>Sacred naming ceremony for your newborn with Vedic rituals, jyotish-based name and family blessings.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
+        <p>Guided naming ceremony for your newborn with Vedic vidhi and mantras.</p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" style="opacity:0.6;">
+        <span style="display:inline-block;background:#f4f4f4;color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;margin-bottom:8px;">Coming Soon</span>
+        <div class="icon">🏛️</div>
+        <h3>Vaastu Pooja</h3>
+        <p>Guided purification ceremony to harmonize the energies of your home or office.</p>
+      </div>
+
+      <div class="service-card" style="opacity:0.6;">
+        <span style="display:inline-block;background:#f4f4f4;color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:3px 10px;margin-bottom:8px;">Coming Soon</span>
         <div class="icon">✂️</div>
         <h3>Mundan Sanskar</h3>
-        <p>First hair-cutting ceremony performed with traditional vidhi, sacred mantras and family prayers.</p>
-        <a class="btn btn-outline" href="booking.html">Request Seva</a>
+        <p>Guided first hair-cutting ceremony with traditional vidhi and sacred mantras.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="section alt">
+<!-- ── PLAYER VIEW ─────────────────────────────────────── -->
+<section class="section" id="view-player" style="padding-top:16px;display:none;">
+  <div class="container">
+
+    <!-- Back + progress -->
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:10px;">
+      <button class="btn btn-secondary" onclick="backToGrid()" style="font-size:13px;">← Back to Pooja Seva</button>
+      <span id="step-counter" style="font-size:13px;font-weight:700;color:var(--muted);"></span>
+    </div>
+    <div style="height:8px;background:var(--border);border-radius:99px;margin-bottom:24px;overflow:hidden;">
+      <div id="progress-bar" style="height:100%;background:linear-gradient(90deg,var(--maroon),var(--saffron));border-radius:99px;transition:width .3s;"></div>
+    </div>
+
+    <!-- Video + step panel -->
+    <div style="display:grid;grid-template-columns:1.4fr 0.6fr;gap:22px;align-items:start;margin-bottom:22px;">
+
+      <div class="card" style="padding:0;overflow:hidden;aspect-ratio:16/9;border-radius:18px;">
+        <iframe id="video-frame" src="" title="Guided Pooja Step" allowfullscreen style="width:100%;height:100%;border:0;display:block;"></iframe>
+      </div>
+
+      <div class="card" style="padding:24px;">
+        <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:700;color:var(--maroon);text-transform:uppercase;letter-spacing:1px;">Satyanarayan Pooja</span>
+        <h2 id="step-title" style="margin:12px 0 8px;font-size:1.3rem;color:var(--maroon);"></h2>
+        <p id="step-desc" style="font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 16px;"></p>
+        <div id="mantra-box" style="background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:16px;display:none;">
+          <strong style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px;">Mantra</strong>
+          <span id="mantra-text" style="font-family:'Playfair Display',serif;font-size:14px;color:var(--maroon);line-height:1.6;"></span>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <button class="btn btn-secondary" id="btn-prev" onclick="prevStep()" style="flex:1;text-align:center;">← Previous</button>
+          <button class="btn btn-primary" id="btn-next" onclick="nextStep()" style="flex:1;text-align:center;">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Samagri checklist -->
+    <div class="card" style="padding:24px;">
+      <h3 style="margin-top:0;color:var(--maroon);">🧺 Samagri Checklist</h3>
+      <div id="samagri-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;"></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section alt" id="view-banner">
   <div class="container">
     <div class="banner">
       <div>
-        <h2>Seek a Pooja Seva?</h2>
-        <p class="section-intro" style="margin:8px 0 0;">Reach out — we will guide you on the right seva, auspicious timing, and preparation with full care.</p>
+        <h2>Need Guidance for a Pooja?</h2>
+        <p class="section-intro" style="margin:8px 0 0;">Reach out — we will guide you on the right pooja, samagri preparation and correct vidhi with full care and devotion.</p>
       </div>
       <div class="banner-btns">
-        <a class="btn btn-primary" href="booking.html">Request Seva</a>
-        <a class="btn btn-secondary" href="contact.html">Reach Out</a>
+        <a class="btn btn-primary" href="contact.html">Reach Out</a>
+        <a class="btn btn-secondary" href="about.html">About Us</a>
       </div>
     </div>
   </div>
@@ -139,14 +193,14 @@
     <div class="footer-grid">
       <div>
         <a class="logo" href="index.html"><img src="logo.png" alt="Dharma Path USA Foundation" class="nav-logo footer-logo"/></a>
-        <p>Dharma Path USA Foundation is a non-profit dedicated to Sanatan Dharma awareness, Vedic rituals, prayer gatherings, scripture teachings, and community outreach for spiritual growth, well-being, and cultural awareness across the United States.</p>
+        <p>Dharma Path USA Foundation is a non-profit dedicated to Sanatan Dharma awareness, Vedic rituals, prayer gatherings, scripture teachings, and community outreach for spiritual growth, well-being and cultural awareness.</p>
       </div>
       <div>
         <h4>Pages</h4>
         <p><a href="index.html">Home</a></p>
+        <p><a href="community-seva.html">Community Seva</a></p>
         <p><a href="pooja-seva.html">Pooja Seva</a></p>
         <p><a href="spiritual-seva.html">Spiritual Seva</a></p>
-        <p><a href="jyotish.html">Jyotish</a></p>
         <p><a href="education.html">Discourse</a></p>
         <p><a href="about.html">About</a></p>
       </div>
@@ -159,9 +213,9 @@
       <div>
         <h4>Contact</h4>
         <p>📞 (214)945-5080</p>
-        <p>✉️ seva@dharmpath.com</p>
+        <p>✉️ seva@dharmpathusa.com</p>
         <p>💬 WhatsApp available</p>
-        <p style="margin-top:12px;">Serving communities across the United States</p>
+        <p style="margin-top:12px;">Serving communities with devotion</p>
       </div>
     </div>
     <div class="footer-bottom">© <span id="year"></span> Dharma Path USA Foundation. All rights reserved.</div>
@@ -171,5 +225,80 @@
 <script src="assets/auth.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/chatbot.js"></script>
+<script>
+const POOJA = {
+  title: 'Satyanarayan Pooja',
+  samagri: [
+    'Kalash with water','Mango leaves / betel leaves','Coconut','Flowers and akshat',
+    'Panchamrit','Prasad / sheera','Deepak and incense','Fruits and naivedya'
+  ],
+  steps: [
+    { title: 'Welcome & Introduction',    desc: 'Begin with the purpose of Satyanarayan Pooja and prepare the mind for devotion.',          video: 'https://www.youtube.com/embed/50vMSpTFt3M', mantra: '' },
+    { title: 'Preparation & Sankalp',     desc: 'Understand the basic setup and take sankalp for the pooja.',                               video: 'https://www.youtube.com/embed/zv1FqKH97zE', mantra: 'Om Shri Satyanarayanaya Namah' },
+    { title: 'Achaman & Purification',    desc: 'Follow achaman and purification before beginning the ritual.',                             video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_3', mantra: 'Om Keshavaya Namah, Om Narayanaya Namah, Om Madhavaya Namah' },
+    { title: 'Ganesh Pooja',              desc: 'Invoke Lord Ganesha for an auspicious beginning.',                                         video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_4', mantra: 'Om Gan Ganapataye Namah' },
+    { title: 'Kalash Sthapana',           desc: 'Perform Kalash Sthapana as part of the sacred pooja setup.',                              video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_5', mantra: '' },
+    { title: 'Satyanarayan Pooja & Katha',desc: 'Proceed with the main worship and Satyanarayan Katha.',                                   video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_6', mantra: 'Om Namo Bhagavate Vasudevaya' },
+    { title: 'Naivedya & Aarti',          desc: 'Offer prasad and complete the pooja with aarti.',                                         video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_7', mantra: '' },
+    { title: 'Closing Blessing',          desc: 'Conclude the pooja with gratitude, prasad and blessings.',                                 video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_8', mantra: 'Sarve Bhavantu Sukhinah' }
+  ]
+};
+
+var currentStep = 0;
+
+function beginPooja() {
+  currentStep = 0;
+  buildSamagri();
+  renderStep();
+  document.getElementById('view-grid').style.display = 'none';
+  document.getElementById('view-banner').style.display = 'none';
+  document.getElementById('view-player').style.display = '';
+  document.getElementById('breadcrumb-label').textContent = 'Satyanarayan Pooja';
+  document.getElementById('page-title').textContent = 'Satyanarayan Pooja — Guided Seva';
+  document.getElementById('page-sub').textContent = 'Follow each step with devotion. Watch the video, recite the mantra, and proceed at your own pace.';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function backToGrid() {
+  document.getElementById('video-frame').src = '';
+  document.getElementById('view-player').style.display = 'none';
+  document.getElementById('view-grid').style.display = '';
+  document.getElementById('view-banner').style.display = '';
+  document.getElementById('breadcrumb-label').textContent = 'Guided Pooja Seva';
+  document.getElementById('page-title').textContent = 'Guided Pooja Seva';
+  document.getElementById('page-sub').textContent = 'Step-by-step Vedic pooja guidance — empowering families to perform sacred rituals at home with devotion, correct vidhi and full reverence.';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderStep() {
+  var s = POOJA.steps[currentStep];
+  var total = POOJA.steps.length;
+  document.getElementById('step-title').textContent = s.title;
+  document.getElementById('step-desc').textContent = s.desc;
+  document.getElementById('video-frame').src = s.video;
+  document.getElementById('step-counter').textContent = 'Step ' + (currentStep + 1) + ' of ' + total;
+  document.getElementById('progress-bar').style.width = Math.round(((currentStep + 1) / total) * 100) + '%';
+  var mb = document.getElementById('mantra-box');
+  if (s.mantra) {
+    document.getElementById('mantra-text').textContent = s.mantra;
+    mb.style.display = '';
+  } else {
+    mb.style.display = 'none';
+  }
+  document.getElementById('btn-prev').disabled = currentStep === 0;
+  document.getElementById('btn-next').disabled = currentStep === total - 1;
+  document.getElementById('btn-next').textContent = currentStep === total - 2 ? 'Last Step →' : currentStep === total - 1 ? '🙏 Pooja Complete' : 'Next →';
+}
+
+function nextStep() { if (currentStep < POOJA.steps.length - 1) { currentStep++; renderStep(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }
+function prevStep() { if (currentStep > 0) { currentStep--; renderStep(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }
+
+function buildSamagri() {
+  var grid = document.getElementById('samagri-grid');
+  grid.innerHTML = POOJA.samagri.map(function(item) {
+    return '<label style="background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--maroon);width:15px;height:15px;flex-shrink:0;"/> ' + item + '</label>';
+  }).join('');
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+:root {
+  --bg: #fff8ec;
+  --card: #ffffff;
+  --text: #2b1a11;
+  --muted: #765f51;
+  --primary: #9c3f16;
+  --primary2: #d97922;
+  --gold: #f3c56a;
+  --line: #f0d8b7;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at top left, #fff1d2 0, var(--bg) 38%, #fff 100%); color: var(--text); }
+button, a { font: inherit; }
+
+.header {
+  position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 6vw; backdrop-filter: blur(12px); background: rgba(255,248,236,.88); border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; gap: 12px; align-items: center; cursor: pointer; }
+.brandMark { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: linear-gradient(135deg, var(--primary), var(--primary2)); font-size: 25px; box-shadow: 0 10px 30px rgba(156,63,22,.25); }
+.brandTitle { font-size: 26px; font-weight: 800; letter-spacing: -.03em; }
+.brandSub { font-size: 12px; color: var(--muted); }
+.nav { display: flex; gap: 8px; }
+.nav button, .mobilePanel button { border: 0; background: transparent; padding: 10px 14px; border-radius: 999px; color: var(--muted); cursor: pointer; }
+.nav button.active, .nav button:hover { background: #fff0d9; color: var(--primary); }
+.menuBtn, .closeBtn { display: none; border: 0; background: transparent; }
+.mobilePanel { display:none; }
+
+.hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 34px; padding: 70px 6vw 42px; align-items: center; max-width: 1240px; margin: auto; }
+.eyebrow { display:inline-flex; gap:8px; align-items:center; color: var(--primary); background:#fff0d9; border:1px solid var(--line); padding:8px 12px; border-radius:999px; font-weight:700; }
+h1 { font-size: clamp(38px, 6vw, 70px); line-height: 1.02; letter-spacing: -.06em; margin: 18px 0; }
+.hero p, .sectionTitle p, .contentCard p, .poojaCard p, .stepPanel p { color: var(--muted); font-size: 18px; line-height: 1.7; }
+.heroActions { display:flex; gap:14px; flex-wrap: wrap; margin-top:24px; }
+.primary, .secondary, .textBtn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius: 14px; padding: 13px 18px; cursor:pointer; border:0; font-weight: 800; }
+.primary { background: linear-gradient(135deg, var(--primary), var(--primary2)); color:#fff; box-shadow: 0 14px 28px rgba(156,63,22,.25); }
+.primary:disabled, .secondary:disabled { opacity:.45; cursor:not-allowed; }
+.secondary { background:#fff; color:var(--primary); border:1px solid var(--line); }
+.textBtn { background:transparent; color:var(--primary); padding:8px 0; }
+.wide { width:100%; }
+.heroCard, .contentCard, .poojaCard, .videoCard, .stepPanel { background: rgba(255,255,255,.88); border: 1px solid var(--line); border-radius: 28px; box-shadow: 0 24px 70px rgba(95,50,10,.10); }
+.heroCard { padding: 36px; text-align:center; }
+.lamp { font-size:70px; margin-bottom:12px; }
+.heroCard h2 { font-size: 34px; margin: 0 0 8px; }
+.features { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; padding: 20px 6vw 60px; max-width:1240px; margin:auto; }
+.features div { background:#fff; border:1px solid var(--line); border-radius:22px; padding:24px; }
+.features strong { display:block; font-size:20px; margin-bottom:8px; }
+.features span { color:var(--muted); }
+
+.pageWrap { padding: 48px 6vw 70px; max-width: 1180px; margin:auto; }
+.sectionTitle { margin-bottom:26px; }
+.sectionTitle h1, .contentCard h1 { font-size: clamp(34px, 5vw, 54px); }
+.contentCard { padding: 34px; }
+.poojaGrid { display:grid; grid-template-columns: repeat(4,1fr); gap:18px; }
+.poojaCard { padding:26px; position:relative; }
+.poojaCard h2 { margin:10px 0; }
+.poojaIcon { font-size:42px; }
+.tag { display:inline-block; color:var(--primary); background:#fff0d9; border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:12px; font-weight:800; }
+.muted { opacity:.78; }
+.mutedTag { color:#777; background:#f4f4f4; }
+.meta { display:flex; gap:8px; flex-wrap:wrap; margin:18px 0; }
+.meta span { background:#fff7e7; border:1px solid var(--line); padding:7px 10px; border-radius:999px; color:var(--muted); font-size:13px; }
+.contactCard a { color:var(--primary); display:inline-flex; align-items:center; gap:8px; font-weight:800; text-decoration:none; }
+
+.playerWrap { padding: 30px 6vw 70px; max-width: 1280px; margin:auto; }
+.playerTop { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.progressText { color:var(--muted); font-weight:700; }
+.progressBar { height:10px; background:#f4dec0; border-radius:99px; margin:16px 0 24px; overflow:hidden; }
+.progressBar span { display:block; height:100%; background:linear-gradient(90deg,var(--primary),var(--primary2)); border-radius:99px; transition:.2s; }
+.playerGrid { display:grid; grid-template-columns: 1.35fr .65fr; gap:22px; align-items:start; }
+.videoCard { overflow:hidden; padding:0; aspect-ratio:16/9; }
+.videoCard iframe { width:100%; height:100%; border:0; display:block; }
+.stepPanel { padding:28px; }
+.stepPanel h1 { font-size: 34px; letter-spacing:-.03em; }
+.mantra { background:#fff5e5; border:1px solid var(--line); padding:18px; border-radius:18px; margin:18px 0; }
+.mantra strong, .mantra span { display:block; }
+.mantra span { color:var(--muted); margin-top:6px; line-height:1.6; }
+.controls { display:flex; gap:12px; margin-top:22px; }
+.samagri { margin-top:24px; }
+.samagri h2 { margin-top:0; }
+.checkGrid { display:grid; grid-template-columns: repeat(4,1fr); gap:12px; }
+.checkGrid label { background:#fffaf2; border:1px solid var(--line); border-radius:14px; padding:12px; color:var(--muted); }
+footer { text-align:center; padding:28px; color:var(--muted); border-top:1px solid var(--line); }
+
+@media (max-width: 900px) {
+  .desktopNav { display:none; }
+  .menuBtn { display:block; }
+  .mobilePanel { position:fixed; inset:0; background:#fff8ec; display:flex; flex-direction:column; padding:80px 28px; gap:14px; z-index:20; }
+  .mobilePanel button { font-size:24px; text-align:left; }
+  .closeBtn { display:block; position:absolute; top:20px; right:20px; }
+  .hero, .playerGrid { grid-template-columns: 1fr; }
+  .features, .poojaGrid, .checkGrid { grid-template-columns: 1fr; }
+  .playerTop { align-items:flex-start; flex-direction:column; }
+  .controls { flex-direction:column; }
+}
