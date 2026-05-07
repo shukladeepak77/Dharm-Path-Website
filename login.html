@@ -102,7 +102,6 @@
       <p style="color:var(--muted);font-size:14px;margin-bottom:20px;">New to Dharma Path USA Foundation? Create an account to track your seva requests.</p>
       <form class="quick-form" id="register-form" novalidate>
         <input id="reg-name" placeholder="Full Name" style="grid-column:span 2;" required/>
-        <input id="reg-phone" placeholder="Phone Number"/>
         <input id="reg-email" placeholder="Email Address" type="email" required/>
         <input id="reg-password" placeholder="Password" type="password" required/>
         <input id="reg-confirm" placeholder="Confirm Password" type="password" required/>
@@ -194,7 +193,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     var result = DP.register(
       document.getElementById('reg-name').value,
-      document.getElementById('reg-phone').value,
       document.getElementById('reg-email').value.trim(),
       password
     );

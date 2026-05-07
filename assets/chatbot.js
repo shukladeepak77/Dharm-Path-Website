@@ -25,9 +25,8 @@ Or connect with us on WhatsApp: 📞 <b>(214)945-5080</b>`
       re: /seva|community|program|pooja|puja|path|katha|bhajan|jagran|havan|yagya|chowki|sandhya|what do you do|activities/i,
       ans: `At Dharma Path USA Foundation, our community seva includes:<br><br>
 🧘 <b>Spiritual Guidance</b> — personal guidance on dharma, scriptures and life<br>
-🎶 <b>Bhajan, Satsang & Sundar Kand</b> — devotional gatherings open to all<br>
+🎶 <b>Bhajan, Satsang, Sundar Kand & more</b> — various devotional gatherings open to all<br>
 📚 <b>Children & Sanskar</b> — dharma education for the next generation<br>
-💛 <b>Emotional & Spiritual Support</b> — compassionate support during difficult times<br>
 🪔 <b>Festival & Cultural Programs</b> — celebrating and preserving our heritage<br>
 🤝 <b>Charity & Volunteer Seva</b> — giving back to the community<br><br>
 👉 <a href="community-seva.html" style="color:#d96a00;text-decoration:underline">Our Community Seva →</a>`
@@ -247,9 +246,8 @@ Feel free to ask us on WhatsApp for any guidance.`
           </div>
         </div>
         <div id="dp-sub">
-          <div class="dp-sub-txt">Need to talk to someone right now?</div>
-          <a class="dp-live-btn" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharma%20Path%20USA%20Foundation." target="_blank">
-            📱 Live on WhatsApp
+          <a class="dp-live-btn" href="https://wa.me/12149455080?text=Jai%20Shri%20Ram!%20I%20have%20a%20query%20about%20Dharma%20Path%20USA%20Foundation." target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(90deg,#25d366,#128c7e);color:#fff;font-weight:700;font-size:13px;padding:9px 14px;border-radius:10px;text-decoration:none;letter-spacing:0.3px;">
+            <span style="font-size:17px;">💬</span> Connect on WhatsApp &nbsp;·&nbsp; 📞 (214)945-5080
           </a>
         </div>
         <div id="dp-msgs"></div>

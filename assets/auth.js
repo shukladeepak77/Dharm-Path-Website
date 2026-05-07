@@ -18,13 +18,13 @@
     return getUsers().find(function (u) { return u.email === email; }) || null;
   }
 
-  function register(name, phone, email, password) {
+  function register(name, email, password) {
     if (!name || !email || !password) return { ok: false, error: 'Please fill all required fields.' };
     var users = getUsers();
     if (users.some(function (u) { return u.email === email.toLowerCase(); })) {
       return { ok: false, error: 'An account with this email already exists. Please log in.' };
     }
-    users.push({ name: name.trim(), phone: phone.trim(), email: email.toLowerCase(), password: password });
+    users.push({ name: name.trim(), email: email.toLowerCase(), password: password });
     saveUsers(users);
     setSession(email.toLowerCase());
     return { ok: true };
